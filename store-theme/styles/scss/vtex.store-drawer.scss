@@ -1,0 +1,50 @@
+@use './config/variables' as *;
+
+.overlay {
+  background: $c-main-black-dark;
+}
+
+.drawer {
+  @include mobile {
+    @supports (-webkit-touch-callout: none) {
+      max-width: 330px !important;
+    }
+  }
+
+  .closeIconContainer {
+    position: absolute;
+    right: 5px;
+    top: 20px;
+
+    @supports (-webkit-touch-callout: none) {
+      display: none;
+    }
+  }
+
+  .childrenContainer {
+    flex-direction: column;
+  }
+}
+
+.openIconContainer {
+  @include mobile {
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 25px;
+      height: 25px;
+      background-image: url(assets/svg/hamburger-menu.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+
+    .menuIcon {
+      display: none;
+    }
+  }
+}

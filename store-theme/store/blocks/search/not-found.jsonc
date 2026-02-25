@@ -1,0 +1,50 @@
+{
+  "store.not-found#search": {
+    "children": ["flex-layout.row#not-found"]
+  },
+  "flex-layout.row#not-found": {
+    "title": "Página não encontrada",
+    "children": ["image-list#not-found", "flex-layout.col#not-found"],
+    "props": {
+      "fullWidth": true,
+      "colSizing": "auto",
+      "blockClass": "page-not-found",
+      "preventVerticalStretch": true
+    }
+  },
+  "flex-layout.col#not-found": {
+    "children": ["rich-text#not-found", "link.product#back-to-home"],
+    "props": {
+      "blockClass": "page-not-found",
+      "preventVerticalStretch": true
+    }
+  },
+  "image-list#not-found": {
+    "title": "Imagens Banner Principal",
+    "props": {
+      "blockClass": "not-found",
+      "height": 1000,
+      "images": [
+        {
+          "image": "assets/svg/page-not-found-bg.svg",
+          "mobileImage": "assets/svg/page-not-found-bg-mobile.svg"
+        }
+      ]
+    }
+  },
+  "rich-text#not-found": {
+    "title": "Texto",
+    "props": {
+      "text": "### Por favor, tente novamente mais tarde.\n\n A **página** que você está procurando está temporariamente **indisponível**.",
+      "blockClass": "page-not-found"
+    }
+  },
+  "link.product#back-to-home": {
+    "title": "Botão voltar",
+    "props": {
+      "href": "/",
+      "label": "Voltar",
+      "blockClass": "back-to-home"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "rich-text#institucional-breadcrumb": {
+    "title": "Breadcrumb",
+    "props": {
+      "blockClass": ["institutional-breadcrumb"],
+      "text": "[Home](/) **Página**"
+    }
+  }
+}

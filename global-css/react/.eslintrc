@@ -1,0 +1,11 @@
+{
+  "extends": "vtex-react/io",
+  "rules": {
+    "@typescript-eslint/restrict-plus-operands": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}

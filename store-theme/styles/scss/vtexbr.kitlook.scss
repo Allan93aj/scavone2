@@ -1,0 +1,101 @@
+.kitlookTotalizerQuantityLabel,
+.kitlookTotalizerQuantity,
+.kitlookTotalizerPriceLabel,
+.kitlookTotalizerPrice {
+  color: black;
+  font-weight: bold;
+}
+
+.kitlookTotalizerPriceLabel {
+  position: relative;
+  color: transparent;
+
+  &::before {
+    content: 'TOTAL';
+    color: black;
+    font-weight: bold;
+    position: absolute;
+    text-transform: uppercase;
+    left: 0;
+    top: 0;
+  }
+}
+
+.productNameContainer {
+  background: red;
+}
+
+.kitlookImage {
+  // background: red;
+}
+
+.kitlookBox {
+  // max-width: 45vw;
+  // width: 45vw;
+  @media (max-width: 768px) {
+    max-width: initial;
+    width: initial;
+    margin-left: 0;
+  }
+
+  // .productImage {
+  //   background-color: red;
+  // }
+  margin-left: 0px;
+}
+
+.kitlookTotalizer {
+  @media (max-width: 768px) {
+    max-width: initial;
+    width: initial;
+    margin-left: 0;
+  }
+
+  // max-width: 45vw;
+  // width: 45vw;
+  // margin-left: 60px;
+}
+
+.kitlookContainer {
+  // max-width: 1440px;
+}
+
+.kitlookDetails {
+  // border: 1px solid green;
+  :global(.vtex-store-components-3-x-sellingPrice) {
+    font-size: 20px;
+    margin-bottom: 8px;
+
+    @media only screen and (max-width: 768px) {
+      font-size: 14px;
+    }
+
+    :global(.vtex-store-components-3-x-productNameContainer) {
+      margin-bottom: 0;
+      border: 1px solid red;
+    }
+  }
+}
+
+// :global(.vtex-store-components-3-x-sellingPrice) {
+//   border: 1px solid teal;
+// }
+.currencyContainer {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: #231f20;
+}
+
+.vtex-store-components-3-x-productNameContainer {
+  color: #231f20;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  max-width: 1050px;
+  border: 1px solid red;
+}
+
+.kitlookName {
+  margin-bottom: 20px;
+}

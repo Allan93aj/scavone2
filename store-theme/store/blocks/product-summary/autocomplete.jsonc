@@ -1,0 +1,51 @@
+{
+  "product-summary.shelf#autocomplete": {
+    "props": {
+      "blockClass": "autocomplete"
+    },
+    "children": ["flex-layout.row#autocomplete-summary"]
+  },
+  "flex-layout.row#autocomplete-summary": {
+    "props": {
+      "blockClass": "autocomplete-summary",
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true
+    },
+    "children": [
+      "product-summary-image",
+      "flex-layout.col#autocomplete-summary"
+    ]
+  },
+  "flex-layout.col#autocomplete-summary": {
+    "props": {
+      "blockClass": "autocomplete-summary",
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "product-summary-name#autocomplete",
+      "product-selling-price-range#autocomplete",
+      "product-installments#autocomplete"
+    ]
+  },
+  "product-selling-price-range#autocomplete": {
+    "props": {
+      "message": "{minPriceValue} - {maxPriceValue}",
+      "blockClass": ["autocomplete"]
+    }
+  },
+  "product-installments#autocomplete": {
+    "props": {
+      "blockClass": ["autocomplete"]
+    }
+  },
+  "product-summary-name#autocomplete": {
+    "props": {
+      "blockClass": ["autocomplete"]
+    }
+  },
+  "product-summary-name#shelf-complete-collection": {
+    "props": {
+      "blockClass": ["shelf-complete-collection"]
+    }
+  }
+}

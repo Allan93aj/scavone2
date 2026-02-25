@@ -1,0 +1,40 @@
+@use './config/variables' as *;
+
+.summaryItemContainer {
+  .summaryItemLabel {
+    font-weight: 500;
+    font-size: 13px;
+    color: $c-main-black-light;
+  }
+
+  .price {
+    font-weight: 600;
+    font-size: 13px;
+    color: $c-main-black-light;
+  }
+
+  &:last-child {
+    margin-top: 25px;
+
+    @supports (-webkit-touch-callout: none) {
+      margin-top: 10px;
+    }
+
+    .summaryItemLabel {
+      font-weight: 600;
+      font-size: 14px;
+      color: $c-main-black-dark;
+      text-transform: uppercase;
+    }
+
+    .price {
+      font-weight: 600;
+      font-size: 16px;
+      color: $c-main-black-dark;
+    }
+  }
+}
+
+.summarySmallDisclaimer {
+  display: none;
+}

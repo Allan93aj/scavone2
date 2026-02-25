@@ -1,0 +1,226 @@
+@use './config/variables' as *;
+
+.biggy-autocomplete-wrapper {
+  width: 50vw;
+
+  .biggy-autocomplete {
+    top: 48px;
+    width: auto;
+    right: 0;
+    padding: 0;
+
+    @include mobile {
+      top: 13px;
+      width: 90vw;
+    }
+
+    .history-and-top-wrapper {
+      padding: 32px 0;
+
+      @include mobile {
+        padding: 24px 0;
+      }
+    }
+
+    .close-btn {
+      width: 24px;
+      height: 24px;
+      top: 15px;
+      right: 18px;
+
+      :global(.vtex__icon-close) {
+        width: 24px;
+        height: 24px;
+
+        @supports (-webkit-touch-callout: none) {
+          width: 17px;
+          color: $c-main-black-dark;
+        }
+      }
+    }
+
+    .itemList {
+      &--suggestion {
+        background: #fafafa;
+        width: 310px;
+        padding-top: 32px;
+
+        @include mobile {
+          width: 100%;
+
+          .itemListTitle {
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .itemListTitle {
+      margin-top: 0;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 16px;
+      color: $c-main-black-dark;
+      text-transform: initial;
+      font-family: 'Montserrat';
+      margin-bottom: 29px;
+      padding: 0 34px;
+
+      @include mobile {
+        text-align: center;
+      }
+    }
+
+    .itemListLink {
+      align-items: center;
+      display: flex;
+      padding: 0 32px;
+      margin: 10px auto;
+      gap: 10px;
+
+      .itemListPrefix {
+        width: 27.14px;
+        height: 27.14px;
+        background: $c-main-green;
+        border-radius: 3.61905px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 16px;
+        text-transform: uppercase;
+        color: $c-main-black-light;
+        font-family: 'Montserrat';
+      }
+
+      .itemListLinkTitle {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 14px;
+        font-family: 'Montserrat';
+        color: $c-main-black-light;
+        padding-left: 9px;
+      }
+    }
+
+    .itemListTitle {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 16px;
+      color: $c-main-black-dark;
+    }
+
+    .itemListList {
+      .itemListLinkTitle {
+        padding: 0;
+        display: flex;
+        gap: 3px;
+        flex-wrap: wrap;
+        text-transform: capitalize;
+        line-height: 16px;
+      }
+
+      .itemListSubItemLink {
+        font-family: 'Montserrat', sans-serif;
+
+        &:hover {
+          padding: 0 30px;
+        }
+      }
+    }
+
+    .tileList {
+      border: none;
+      width: 410px;
+      padding-top: 32px;
+      min-height: 300px;
+
+      @include mobile {
+        width: 100%;
+      }
+
+      .tileListTitle {
+        margin: 0 0 29px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 16px;
+        color: $c-main-black-dark;
+        text-transform: capitalize;
+
+        @include mobile {
+          text-align: center;
+        }
+      }
+
+      .tileListList {
+        flex-direction: column !important;
+        margin-bottom: 0;
+      }
+    }
+
+    .tileListItem {
+      &:first-child {
+        :global(.vtex-product-summary-2-x-imageContainer) {
+          max-width: 138px;
+        }
+
+        :global(.vtex-product-summary-2-x-brandName--autocomplete) {
+          font-size: 16px;
+        }
+
+        @include mobile {
+          :global(.vtex-product-summary-2-x-brandName--shelf-complete-collection) {
+            font-size: 20px;
+            margin-top: 5px;
+          }
+        }
+
+        :global(.vtex-product-price-1-x-sellingPriceRangeMinValue--autocomplete),
+        :global(.vtex-product-price-1-x-sellingPriceRangeMaxValue--autocomplete) {
+          :global(.vtex-product-price-1-x-currencyContainer--autocomplete) {
+            font-size: 14px;
+          }
+        }
+
+        :global(.vtex-product-summary-2-x-nameContainer--autocomplete) {
+          margin-bottom: 25px;
+        }
+
+        :global(.vtex-product-price-1-x-installments--autocomplete) {
+          margin-top: 11px;
+        }
+      }
+    }
+
+    .tileListFooter {
+      .tileListSeeMore {
+        font-size: 0;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 27px;
+
+        &::before {
+          content: 'Ver todos';
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 12px;
+          color: $c-main-black-light;
+        }
+
+        &::after {
+          content: '';
+          display: block;
+          width: 19px;
+          height: 19px;
+          background-image: url(assets/svg/see-all-search-icon.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 100%;
+        }
+      }
+    }
+  }
+}

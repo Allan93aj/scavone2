@@ -1,0 +1,35 @@
+@use './config/variables' as *;
+
+.modal {
+  max-width: 44%;
+  margin: 0 auto;
+
+  @include mobile {
+    max-width: 100%;
+  }
+
+  .headerContainer {
+    border: none;
+  }
+}
+
+.backdrop {
+  &--measurement-chart {
+    background: $c-main-black-light;
+  }
+}
+
+.triggerContainer {
+  position: absolute;
+  right: 0;
+  top: 44%;
+
+  @include mobile {
+    position: initial;
+  }
+
+  &--measurement-chart {
+    position: static;
+    margin-bottom: 24px;
+  }
+}

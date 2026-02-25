@@ -1,0 +1,4 @@
+@mixin containerWithPadding($padding) {
+  padding-inline: $padding;
+  max-width: calc(1300px + $padding);
+}

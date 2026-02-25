@@ -1,0 +1,102 @@
+{
+  "store.custom#about-us": {
+    "children": ["flex-layout.row#about-us"]
+  },
+  "flex-layout.row#about-us": {
+    "children": ["flex-layout.col#about-us"],
+    "title": "Sobre nós",
+    "props": {
+      "blockClass": ["about-us"],
+      "fullWidth": true
+    }
+  },
+  "flex-layout.col#about-us": {
+    "children": [
+      "rich-text#institucional-breadcrumb",
+      "scavone-banner#about-us",
+      "flex-layout.row#about-us-text-container",
+      "rich-text#about-us-text-bar",
+      "flex-layout.row#about-us-text-manifest",
+      "scavone-history-slider"
+    ],
+    "props": {
+      "blockClass": ["about-us"]
+    }
+  },
+  "scavone-banner#about-us": {
+    "props": {
+      "src": "https://via.placeholder.com/2880x365",
+      "srcMobile": "https://via.placeholder.com/750x400",
+      "width": 2880,
+      "height": 365,
+      "alt": "",
+      "heightMobile": 400,
+      "widthMobile": 750,
+      "textPosition": "right",
+      "blockClass": "instBanner"
+    }
+  },
+  "flex-layout.row#about-us-text-container": {
+    "title": "Descrição",
+    "children": [
+      "scavone-imagem#about-us-luiz-scavone",
+      "rich-text#about-us-text"
+    ],
+    "props": {
+      "blockClass": ["about-us-text-container"],
+      "colSizing": "auto"
+    }
+  },
+  "scavone-imagem#about-us-luiz-scavone": {
+    "props": {
+      "blockClass": ["about-us-luiz-scavone"],
+      "width": "100%",
+      "height": "auto",
+      "alt": "",
+      "src": "https://via.placeholder.com/1060x1324"
+    }
+  },
+  "rich-text#about-us-text": {
+    "title": "Texto",
+    "props": {
+      "blockClass": ["about-us-text"],
+      "text": "Lorem"
+    }
+  },
+  "rich-text#about-us-text-bar": {
+    "title": "Texto",
+    "props": {
+      "blockClass": ["about-us-text-bar"],
+      "text": "*Não importa o ambiente, a \n**Scavone** entende seu estilo*",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+  "flex-layout.row#about-us-text-manifest": {
+    "title": "Manifesto",
+    "children": [
+      "rich-text#about-us-manifest",
+      "scavone-imagem#about-us-manifest"
+    ],
+    "props": {
+      "blockClass": ["about-us-text-manifest"],
+      "colSizing": "auto"
+    }
+  },
+  "rich-text#about-us-manifest": {
+    "title": "Texto",
+    "props": {
+      "blockClass": ["about-us-manifest"],
+      "text": "Lorem"
+    }
+  },
+  "scavone-imagem#about-us-manifest": {
+    "props": {
+      "blockClass": ["about-us-manifest"],
+      "width": "100%",
+      "height": "auto",
+      "src": "https://via.placeholder.com/1100x1646",
+      "alt": ""
+    }
+  }
+}

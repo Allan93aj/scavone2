@@ -1,0 +1,204 @@
+{
+  "footer": {
+    "blocks": ["footer-layout.desktop", "footer-layout.mobile"]
+  },
+  "footer-layout.desktop": {
+    "children": ["flex-layout.row#footer-desktop", "back-to-top-button"]
+  },
+  "flex-layout.row#footer-desktop": {
+    "children": ["flex-layout.col#footer-desktop"],
+    "props": {
+      "fullWidth": true,
+      "blockClass": "footer-desktop"
+    }
+  },
+  "flex-layout.col#footer-desktop": {
+    "children": [
+      "flex-layout.row#footer-container",
+      "flex-layout.row#footer-copyright"
+    ],
+    "props": {
+      "blockClass": "footer-container"
+    }
+  },
+  "flex-layout.row#footer-container": {
+    "title": "Rodapé Desktop",
+    "children": [
+      "flex-layout.col#footer-newsletter-social",
+      "flex-layout.row#footer-content-desktop"
+    ],
+    "props": {
+      "blockClass": "footer-content",
+      "colSizing": "auto",
+      "horizontalAlign": "left",
+      "fullWidth": true,
+      "preventVerticalStretch": true
+    }
+  },
+  "flex-layout.col#footer-newsletter-social": {
+    "title": "Formulário e Redes Sociais",
+    "children": ["scavone-newsletter", "scavone-image-list#social-link"]
+  },
+  "scavone-image-list#social-link": {
+    "title": "Formas de pagamento",
+    "props": {
+      "blockClass": "social-link",
+      "height": 29,
+      "images": [
+        {
+          "src": "assets/svg/social/facebook.svg",
+          "width": 30,
+          "alt": "Facebook",
+          "href": ""
+        },
+        {
+          "src": "assets/svg/social/instagram.svg",
+          "width": 30,
+          "alt": "Instagram",
+          "href": ""
+        },
+        {
+          "src": "assets/svg/social/youtube.svg",
+          "width": 30,
+          "alt": "YouTube",
+          "href": ""
+        }
+      ]
+    }
+  },
+  "scavone-newsletter": {
+    "props": {
+      "title": "Newsletter",
+      "subtitle": "Cadastre seu e-mail e fique por dentro das novidades e promoções"
+    }
+  },
+  "flex-layout.row#footer-content-desktop": {
+    "title": "Content",
+    "children": [
+      "vtex.menu@2.x:menu#footer-catalogos",
+      "vtex.menu@2.x:menu#footer-institucional",
+      "vtex.menu@2.x:menu#footer-atendimento",
+      "flex-layout.col#footer-paymentSecurity"
+    ],
+    "props": {
+      "blockClass": "footer-content-desktop"
+    }
+  },
+  "flex-layout.col#footer-paymentSecurity": {
+    "title": "Pagamento e Segurança",
+    "children": [
+      "rich-text#payment-title",
+      "scavone-image-list#paymentForm-list",
+      "rich-text#security-title",
+      "scavone-imagem#security-icon"
+    ],
+    "props": {
+      "blockClass": "footer-content-security"
+    }
+  },
+  "rich-text#payment-title": {
+    "props": {
+      "text": "### FORMA DE PAGAMENTO",
+      "blockClass": "payment-methods"
+    }
+  },
+  "scavone-image-list#paymentForm-list": {
+    "title": "Formas de pagamento",
+    "props": {
+      "blockClass": "payment-methods",
+      "height": 29,
+      "images": [
+        {
+          "src": "assets/svg/payment/pagSeguro.svg",
+          "width": 43,
+          "alt": "PagSeguro"
+        },
+        {
+          "src": "assets/svg/payment/americanExpress.svg",
+          "width": 43,
+          "alt": "American Express"
+        },
+        {
+          "src": "assets/svg/payment/elo.svg",
+          "width": 43,
+          "alt": "Elo"
+        },
+        {
+          "src": "assets/svg/payment/visa.svg",
+          "width": 43,
+          "alt": "Visa"
+        },
+        {
+          "src": "assets/svg/payment/dinersClub.svg",
+          "width": 43,
+          "alt": "DinersClub"
+        },
+        {
+          "src": "assets/svg/payment/hipercard.svg",
+          "width": 43,
+          "alt": "Hipercard"
+        },
+        {
+          "src": "assets/svg/payment/masterCard.svg",
+          "width": 43,
+          "alt": "MasterCard"
+        },
+        {
+          "src": "assets/svg/payment/boleto.svg",
+          "width": 43,
+          "alt": "Boleto"
+        }
+      ]
+    }
+  },
+  "rich-text#security-title": {
+    "props": {
+      "text": "### SEGURANÇA",
+      "blockClass": "footer-security"
+    }
+  },
+  "scavone-imagem#security-icon": {
+    "props": {
+      "src": "/arquivos/seguranca.svg",
+      "blockClass": "footer-security",
+      "width": 53,
+      "height": 44.17,
+      "alt": "Segurança Let's Encrypt"
+    }
+  },
+  "flex-layout.row#footer-copyright": {
+    "title": "Copyright e Icones",
+    "children": [
+      "rich-text#footer-copyright",
+      "scavone-image-list#footer-development"
+    ],
+    "props": {
+      "fullWidth": true,
+      "blockClass": "footer-copyright",
+      "colSizing": "auto",
+      "preventHorizontalStretch": true,
+      "horizontalAlign": "center"
+    }
+  },
+  "rich-text#footer-copyright": {
+    "title": "Copyright",
+    "props": {
+      "text": "2021@ FABRIL SCAVONE S.A.CNPJ 50.115.849/0001-89 - TODOS DIREITOS RESERVADOS.",
+      "blockClass": "footer-copyright"
+    }
+  },
+  "scavone-image-list#footer-development": {
+    "title": "Desenvolvedores",
+    "props": {
+      "blockClass": "footer-dev",
+      "height": 25,
+      "images": [
+        {
+          "src": "/arquivos/vtex-icon.svg",
+          "width": 64,
+          "alt": "Vtex"
+        }
+      ]
+    }
+  }
+}

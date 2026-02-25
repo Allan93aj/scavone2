@@ -1,0 +1,60 @@
+{
+  "scavone-interactive-banner": {
+    "children": ["scavone-cross-product-list#interactive-banner"]
+  },
+
+  "scavone-cross-product-list#interactive-banner": {
+    "blocks": ["scavone-cross-product-summary#interactive-banner"],
+    "props": {
+      "blockClass": "interactive-banner"
+    }
+  },
+
+  "scavone-cross-product-summary#interactive-banner": {
+    "children": [
+      "flex-layout.row#summary-image#interactive-banner",
+      "flex-layout.row#banner-interactive-row"
+    ]
+  },
+
+  "flex-layout.row#summary-image#interactive-banner": {
+    "children": ["scavone-cross-product-image"],
+    "props": {
+      "blockClass": ["summary-image-buy-together"],
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true
+    }
+  },
+
+  "flex-layout.row#banner-interactive-row": {
+    "props": {
+      "blockClass": "banner-interactive-row"
+    },
+    "children": ["flex-layout.col#summary-info#banner-interactive"]
+  },
+
+  "flex-layout.col#summary-info#banner-interactive": {
+    "children": [
+      "scavone-cross-product-name",
+      "flex-layout.row#banner-interactive-row-prices",
+      "product-installments#product-page",
+      "scavone-cross-product-sku-selector"
+    ],
+    "props": {
+      "preventVerticalStretch": true,
+      "blockClass": ["banner-interactive"]
+    }
+  },
+
+  "flex-layout.row#banner-interactive-row-prices": {
+    "title": "",
+    "props": {
+      "blockClass": "banner-interactive-row-prices",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "scavone-cross-product-selling-price",
+      "scavone-cross-product-list-price#kit-look"
+    ]
+  }
+}

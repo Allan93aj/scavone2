@@ -1,0 +1,432 @@
+{
+  "scavone-mega-menu": {
+    "props": {
+      "items": [
+        {
+          "label": "Cama",
+          "href": "/cama",
+          "banner": {
+            "src": "https://via.placeholder.com/478x344",
+            "width": 478,
+            "height": 344,
+            "alt": ""
+          },
+          "submenus": [
+            {
+              "items": [
+                {
+                  "label": "Categorias",
+                  "highlight": true
+                },
+                {
+                  "label": "Almofadas",
+                  "href": "cama/almofadas"
+                },
+                {
+                  "label": "Cobertores",
+                  "href": "cama/cobertores"
+                },
+                {
+                  "label": "Colchas",
+                  "href": "cama/colchas"
+                },
+                {
+                  "label": "Duvet",
+                  "href": "cama/duvet"
+                },
+                {
+                  "label": "Edredons",
+                  "href": "cama/edredons"
+                },
+                {
+                  "label": "Fronhas",
+                  "href": "cama/fronhas"
+                },
+                {
+                  "label": "Jogos de lençol",
+                  "href": "cama/jogo-de-lencol"
+                },
+                {
+                  "label": "Porta travesseiros",
+                  "href": "cama/porta-travesseiros"
+                },
+                {
+                  "label": "Peseiras",
+                  "href": "cama/peseiras"
+                },
+                {
+                  "label": "Avulsos",
+                  "href": "cama/avulsos"
+                },
+                {
+                  "label": "Ambientações",
+                  "href": "/kitlook"
+                }
+              ]
+            },
+            {
+              "items": [
+                {
+                  "label": "Estilos",
+                  "highlight": true
+                },
+                {
+                  "label": "Florais",
+                  "href": "/cama/FLORAIS?map=c,specificationFilter_200"
+                },
+                {
+                  "label": "Básicos",
+                  "href": "/cama/BÁSICOS?map=c,specificationFilter_200"
+                },
+                {
+                  "label": "Clássicos",
+                  "href": "/cama/CLÁSSICOS?map=c,specificationFilter_200"
+                },
+                {
+                  "label": "Urban",
+                  "href": "/cama/URBAN?map=c,specificationFilter_200"
+                }
+              ]
+            },
+            {
+              "items": [
+                {
+                  "label": "Tamanho",
+                  "highlight": true
+                },
+                {
+                  "label": "Solteiro",
+                  "href": "/cama/Solteiro?map=c,specificationFilter_208"
+                },
+                {
+                  "label": "Solteiro King",
+                  "href": "/cama/Solteiro King?map=c,specificationFilter_208"
+                },
+                {
+                  "label": "Casal",
+                  "href": "/cama/Casal?map=c,specificationFilter_208"
+                },
+                {
+                  "label": "Queen",
+                  "href": "/cama/Queen?map=c,specificationFilter_208"
+                },
+                {
+                  "label": "King",
+                  "href": "/cama/King?map=c,specificationFilter_208"
+                }
+              ]
+            },
+            {
+              "items": [
+                {
+                  "label": "Cor",
+                  "highlight": true
+                },
+                {
+                  "label": "Azul",
+                  "href": "/cama/Azul?map=c,specificationFilter_207"
+                },
+                {
+                  "label": "Branco",
+                  "href": "/cama/Branco?map=c,specificationFilter_207"
+                },
+                {
+                  "label": "Caqui",
+                  "href": "/cama/Caqui?map=c,specificationFilter_207"
+                },
+                {
+                  "label": "Cinza",
+                  "href": "/cama/Cinza?map=c,specificationFilter_207"
+                },
+                {
+                  "label": "Grafite",
+                  "href": "/cama/Grafite?map=c,specificationFilter_207"
+                },
+                {
+                  "label": "Marinho",
+                  "href": "/cama/Marinho?map=c,specificationFilter_207"
+                },
+                {
+                  "label": "Pérola",
+                  "href": "/cama/Pérola?map=c,specificationFilter_207"
+                },
+                {
+                  "label": "Preto",
+                  "href": "/cama/Preto?map=c,specificationFilter_207"
+                },
+                {
+                  "label": "Rosa",
+                  "href": "/cama/Rosa?map=c,specificationFilter_207"
+                },
+                {
+                  "label": "Verde",
+                  "href": "/cama/Verde?map=c,specificationFilter_207"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Mesa",
+          "href": "/mesa",
+          "banner": {
+            "src": "https://via.placeholder.com/478x344",
+            "width": 478,
+            "height": 344,
+            "alt": ""
+          },
+          "submenus": [
+            {
+              "items": [
+                {
+                  "label": "Categorias",
+                  "highlight": true
+                },
+                {
+                  "label": "Jogos Americanos",
+                  "href": "/mesa/jogos-americanos"
+                },
+                {
+                  "label": "Acessórios de mesa",
+                  "href": "/mesa/acessorios-de-mesa"
+                },
+                {
+                  "label": "Caminhos de mesa",
+                  "href": "/mesa/caminhos-de-mesa"
+                },
+                {
+                  "label": "Toalhas de mesa",
+                  "href": "/mesa/toalhas-de-mesa"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Banho",
+          "href": "/banho",
+          "banner": {
+            "src": "https://via.placeholder.com/478x344",
+            "width": 478,
+            "height": 344,
+            "alt": ""
+          },
+          "submenus": [
+            {
+              "items": [
+                {
+                  "label": "Categorias",
+                  "highlight": true
+                },
+                {
+                  "label": "Roupão de Microfibra",
+                  "href": "/banho/roupões"
+                },
+                {
+                  "label": "Toalhas",
+                  "href": "/banho/toalhas"
+                },
+                {
+                  "label": "Toalhas piso",
+                  "href": "/banho/toalhas-piso"
+                },
+                {
+                  "label": "Nécessaire",
+                  "href": "/banho/necessaire"
+                }
+              ]
+            },
+            {
+              "items": [
+                {
+                  "label": "Estilos",
+                  "highlight": true
+                },
+                {
+                  "label": "Banho",
+                  "href": "/banho/Banho?map=c,specificationFilter_209"
+                },
+                {
+                  "label": "Baixa torção",
+                  "href": "/banho/Baixa Torção?map=c,specificationFilter_209"
+                },
+                {
+                  "label": "Toalha de piso",
+                  "href": "/banho/Toalha de piso?map=c,specificationFilter_209"
+                }
+              ]
+            },
+            {
+              "items": [
+                {
+                  "label": "Cor",
+                  "highlight": true
+                },
+                {
+                  "label": "Azul",
+                  "href": "/banho/azul?map=c,specificationFilter_216"
+                },
+                {
+                  "label": "Branco",
+                  "href": "/banho/branco?map=c,specificationFilter_216"
+                },
+                {
+                  "label": "Caqui",
+                  "href": "/banho/caqui?map=c,specificationFilter_216"
+                },
+                {
+                  "label": "Cinza",
+                  "href": "/banho/cinza?map=c,specificationFilter_216"
+                },
+                {
+                  "label": "Verde",
+                  "href": "/banho/verde?map=c,specificationFilter_216"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Bambini",
+          "href": "/bambini",
+          "banner": {
+            "src": "https://via.placeholder.com/478x344",
+            "width": 478,
+            "height": 344,
+            "alt": ""
+          },
+          "submenus": [
+            {
+              "items": [
+                {
+                  "label": "Categorias",
+                  "highlight": true
+                },
+                {
+                  "label": "Banho",
+                  "href": "/bambini/banho"
+                },
+                {
+                  "label": "Berço",
+                  "href": "/bambini/berco"
+                },
+                {
+                  "label": "Cobertores",
+                  "href": "/bambini/cobertores"
+                },
+                {
+                  "label": "Colchas",
+                  "href": "/bambini/colchas"
+                },
+                {
+                  "label": "Edredons",
+                  "href": "/bambini/edredons"
+                },
+                {
+                  "label": "Fronhas",
+                  "href": "/bambini/?f=33"
+                },
+                {
+                  "label": "Jogos de lençol",
+                  "href": "/bambini/jogo-de-lencol"
+                }
+              ]
+            },
+            {
+              "items": [
+                {
+                  "label": "Tamanho",
+                  "highlight": true
+                },
+                {
+                  "label": "Solteiro",
+                  "href": "/bambini/solteiro?map=c,specificationFilter_219"
+                },
+                {
+                  "label": "Casal",
+                  "href": "/bambini/casal?map=c,specificationFilter_219"
+                },
+                {
+                  "label": "Queen",
+                  "href": "/bambini/queen?map=c,specificationFilter_219"
+                },
+                {
+                  "label": "King",
+                  "href": "/bambini/king?map=c,specificationFilter_219"
+                }
+              ]
+            },
+            {
+              "items": [
+                {
+                  "label": "Cor",
+                  "highlight": true
+                },
+                {
+                  "label": "Azul",
+                  "href": "/bambini/azul?map=c,specificationFilter_218"
+                },
+                {
+                  "label": "Branco",
+                  "href": "/bambini/branco?map=c,specificationFilter_218"
+                },
+                {
+                  "label": "Rosa",
+                  "href": "/bambini/rosa?map=c,specificationFilter_218"
+                },
+                {
+                  "label": "Cinza",
+                  "href": "/bambini/cinza?map=c,specificationFilter_218"
+                },
+                {
+                  "label": "Pérola",
+                  "href": "/bambini/perola?map=c,specificationFilter_218"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Aromas",
+          "href": "/aromas",
+          "banner": {
+            "src": "https://via.placeholder.com/478x344",
+            "width": 478,
+            "height": 344,
+            "alt": ""
+          },
+          "submenus": [
+            {
+              "items": [
+                {
+                  "label": "Categorias",
+                  "highlight": true
+                },
+                {
+                  "label": "Água de passar",
+                  "href": "/aromas/agua-de-passar"
+                },
+                {
+                  "label": "Difusor de Ambiente",
+                  "href": "/aromas/difusor-de-ambiente"
+                },
+                {
+                  "label": "Home spray",
+                  "href": "/aromas/home-spray"
+                },
+                {
+                  "label": "Sabonete líquido",
+                  "href": "/aromas/sabonete-liquido"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Outlet",
+          "href": "/outlet"
+        }
+      ]
+    }
+  }
+}

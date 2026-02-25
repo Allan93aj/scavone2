@@ -1,0 +1,67 @@
+@use './config/variables' as *;
+
+:global(.vtex-flex-layout-0-x-flexRowContent--buy-button-and-quantity) {
+  gap: 16px;
+
+  :global(.vtex-button) {
+    // background: $c-main-brown;
+    background: #ceccc3;
+    border: none;
+    border-radius: $border-radius-pattern;
+    transition: all 0.2s ease-in-out;
+
+    @include desktop {
+      max-width: 322px;
+    }
+
+    &:hover {
+      // background: $c-main-green-dark;
+    }
+
+    :global(.vtex-button__label) {
+      .buttonText {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 14px;
+        letter-spacing: 2.05px;
+        text-transform: none;
+        // color: $c-main-black-light;
+        color: #000;
+      }
+    }
+  }
+}
+
+.buttonText {
+  // color: $c-main-black-light;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 120%;
+  text-transform: capitalize;
+  color: #fff;
+}
+
+.buttonText {
+  color: #000;
+
+  @include mobile {
+    font-size: 12px;
+  }
+}
+
+.containeNormal {
+  .vtex-button {
+    visibility: hidden;
+
+    @include mobile {
+      visibility: visible;
+    }
+  }
+
+  &:hover {
+    .vtex-button {
+      visibility: visible;
+    }
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "slider-layout#shelf": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 3,
+        "phone": 2
+      },
+      "infinite": true,
+      "fullWidth": true,
+      "blockClass": ["shelf-home", "shelf-pdp"]
+    }
+  },
+
+  // PRATELEIRA DE PLP E SEARCH
+  "product-summary.shelf": {
+    "props": {
+      "blockClass": "shelf-plp"
+    },
+    "children": [
+      "add-to-list-btn#shelf",
+      // "rich-text#btn-comprar-novo",
+      // "scavone-product-image",
+      "flex-layout.row#img-and-comprar",
+      "product-summary-name",
+      "scavone-product-price-condition-layout#shelf",
+      "product-installments",
+      "product-summary-sku-selector",
+      "flex-layout.row#add-to-cart",
+      "product-price-savings"
+    ]
+  },
+  // "responsive-layout.desktop#scavone-product-price-condition-layout-shelf": {
+  //   "children": ["scavone-product-price-condition-layout#shelf"],
+  //   "props": {
+  //     "blockClass": "scavone-product-price-condition-layout",
+  //     "fullWidth": true
+  //   }
+  // },
+  // "responsive-layout.mobile#scavone-product-price-condition-layout-shelf": {
+  //   "children": ["scavone-product-price-condition-layout#shelf-mobile"],
+  //   "props": {
+  //     "blockClass": "scavone-product-price-condition-layout-mobile",
+  //     "fullWidth": true
+  //   }
+  // },
+
+  // PRATELEIRA DA HOME
+  "product-summary.shelf#home": {
+    "children": [
+      "add-to-list-btn#shelf",
+      "flex-layout.row#img-and-comprar",
+      "product-summary-name",
+      "flex-layout.row#shelf-price-add-to-cart",
+      "product-price-savings"
+    ]
+  },
+
+  "flex-layout.row#img-and-comprar": {
+    "children": ["flex-layout.col#img-and-comprar"],
+    "props": {
+      "blockClass": "row-img-and-comprar"
+    }
+  },
+
+  "flex-layout.col#img-and-comprar": {
+    "children": ["rich-text#btn-comprar-novo", "scavone-product-image"],
+    "props": {
+      "blockClass": "col-img-and-comprar"
+    }
+  },
+
+  "rich-text#btn-comprar-novo": {
+    "props": {
+      "blockClass": "btn-comprar-novo",
+      "text": "Comprar"
+    }
+  },
+
+  "flex-layout.row#shelf-price-add-to-cart": {
+    "children": [
+      "product-selling-price#summary",
+      "flex-layout.row#add-to-cart-home"
+    ],
+    "props": {
+      "blockClass": "shelf-price-add-to-cart-container",
+      "horizontalAlign": "between",
+      "colSizing": "auto",
+      "fullWidth": true,
+      "marginBottom": "10px"
+    }
+  },
+  "product-selling-price#summary": {
+    "props": {
+      "markers": ["highlight"],
+      "blockClass": ["summary", "home"],
+      "message": "A partir de: {sellingPriceValue}"
+    }
+  },
+  "product-selling-price#pdp": {
+    "props": {
+      "markers": ["highlight"],
+      "blockClass": ["summary", "shelf-pdp"],
+      "message": "A partir de: {sellingPriceValue}"
+    }
+  },
+  "product-selling-price#pdp-mobile": {
+    "props": {
+      "markers": ["highlight"],
+      "blockClass": ["summary", "shelf-pdp"],
+      "message": "A partir de: {sellingPriceValue}"
+    }
+  },
+  "scavone-product-price-condition-layout#shelf": {
+    "props": {
+      "HasBestPrice": "product-selling-price#pdp",
+      "Else": "product-selling-price#pdp"
+    }
+  },
+  "scavone-product-price-condition-layout#shelf-mobile": {
+    "props": {
+      "HasBestPrice": "product-selling-price#pdp-mobile",
+      "Else": "product-selling-price#pdp-mobile"
+    }
+  },
+  "product-price-savings": {
+    "props": {
+      "percentageStyle": "compact",
+      "message": "{savingsPercentage} OFF"
+    }
+  },
+  "product-summary-name": {
+    "props": {
+      "tag": "h3"
+    }
+  },
+  "add-to-list-btn#shelf": {
+    "props": {
+      "toastURL": "/account#/shelf",
+      "blockClass": ["shelf"]
+    }
+  },
+  "product-installments": {
+    "props": {
+      "message": "ou até {installmentsNumber}x de {installmentValue}"
+    }
+  },
+  "product-summary-sku-selector": {
+    "props": {
+      "visibleVariations": ["cor", "fragrância"],
+      "showVariationsLabels": "none",
+      "initialSelection": "complete",
+      "blockClass": ["sku__selector"]
+    }
+  },
+  "flex-layout.row#product-price-on-sale": {
+    "props": {
+      "preserveLayoutOnMobile": true,
+      "blockClass": "product-price-on-sale",
+      "preventHorizontalStretch": true
+    },
+    "children": ["product-list-price#shelf", "product-selling-price#shelf"]
+  },
+  "product-list-price#shelf": {
+    "props": {
+      "blockClass": "shelf"
+    }
+  },
+  "product-selling-price#shelf": {
+    "props": {
+      "blockClass": "shelf"
+    }
+  },
+  "product-selling-price-range": {
+    "props": {
+      "message": "{minPriceValue} - {maxPriceValue}"
+    }
+  },
+  "flex-layout.row#add-to-cart": {
+    "children": ["product-summary-buy-button#shelf"],
+    "props": {
+      "blockClass": ["add-to-cart"]
+    }
+  },
+  "flex-layout.row#add-to-cart-home": {
+    "children": ["product-summary-buy-button#shelf"],
+    "props": {
+      "blockClass": ["add-to-cart", "add-to-cart-home"]
+    }
+  },
+  "product-summary-buy-button#shelf": {
+    "props": {
+      "buyButtonText": "Ver Produto",
+      "buyButtonBehavior": "alwaysGoToProduct"
+    }
+  }
+}

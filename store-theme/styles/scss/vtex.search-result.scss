@@ -1,0 +1,929 @@
+@use './config/variables' as *;
+@use './modules/colors' as *;
+
+.searchResultContainer.searchResultContainer.searchResultContainer {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @include mobile {
+    padding: 0;
+  }
+
+  .filters--layout {
+    // width: 18.4vw;
+    // max-width: 267px;
+
+    @include mobile {
+      width: 100%;
+
+      .filtersWrapperMobile {
+        width: 100%;
+      }
+    }
+
+    .filtersWrapper {
+      display: flex;
+
+      .filter__container--title {
+        display: none;
+      }
+    }
+
+    .filter {
+      padding: 0;
+    }
+
+    /* Chrome only: */
+    @media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+      .filterTemplateOverflow {
+        margin-right: 5px;
+      }
+    }
+
+    .filterTemplateOverflow {
+      padding: 0;
+      margin-bottom: 20px;
+      max-height: 145px !important;
+
+      &::-webkit-scrollbar {
+        width: 3.65px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: #e5e5e5;
+      }
+
+      // &::-webkit-scrollbar-thumb {
+      //   background: $c-main-green;
+      // }
+
+      // &::-webkit-scrollbar-thumb:hover {
+      //   background: $c-main-green;
+      // }
+    }
+
+    .filterMessage {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      text-transform: uppercase;
+      color: $c-main-black-dark;
+      margin: 44px 0 43px;
+    }
+
+    .filter__container {
+      padding: 0 23.5px;
+      border: none;
+
+      & {
+        position: relative;
+      }
+
+      &--title {
+        padding: 0;
+      }
+
+      .filterTitle {
+        padding-bottom: 16.4px;
+
+        & {
+          padding: 0px;
+        }
+      }
+
+      .filterTitleSpan {
+        padding: 0;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        color: $c-main-black-dark;
+        text-transform: initial;
+      }
+
+      .filterIcon {
+        padding: 0;
+      }
+
+      .filterItem {
+        padding: 5px 0;
+
+        :global(.vtex-checkbox__line-container) {
+          align-items: center;
+
+          :global(.vtex-checkbox__container) {
+            margin-right: 10px;
+
+            :global(.vtex-checkbox__inner-container) {
+              border: 0.5px solid $c-main-black-light;
+              border-radius: 0px;
+            }
+          }
+        }
+
+        :global(.vtex-checkbox__label) {
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 15px;
+          color: $c-main-black-light;
+          text-transform: initial;
+        }
+
+        &--selected {
+          :global(.vtex-checkbox__line-container) {
+            :global(.vtex-checkbox__container) {
+              :global(.vtex-checkbox__inner-container) {
+                border-color: $c-main-green;
+              }
+
+              :global(.vtex-checkbox__box) {
+                &::before {
+                  content: '';
+                  display: block;
+                  width: 10px;
+                  height: 7px;
+                  background-image: url(assets/svg/filters-check-icon.svg);
+                  background-size: 100%;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                }
+
+                :global(.vtex__icon-check) {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .filter__container--cor {
+      .filterContent {
+        display: flex;
+        column-gap: 14px;
+        flex-wrap: wrap;
+      }
+
+      .filterItem {
+        width: 25px;
+        @include color-category-filter;
+
+        :global(.vtex-checkbox__line-container) {
+          width: 25px;
+          height: 25px;
+
+          :global(.vtex-checkbox__container) {
+            margin: 0;
+            width: 25px;
+            height: 25px;
+
+            :global(.vtex-checkbox__inner-container),
+            :global(.vtex-checkbox__input),
+            :global(.vtex-checkbox__box-wrapper) {
+              width: 25px;
+              height: 25px;
+            }
+
+            :global(.vtex-checkbox__inner-container) {
+              border: none;
+            }
+          }
+        }
+
+        :global(.vtex-checkbox__label) {
+          display: none;
+        }
+      }
+    }
+
+    @include mobile {
+      .filterPopupButton {
+        border: 2px solid #e5e5e5;
+        padding: 11px 22px;
+        background: #ffffff;
+        border-radius: 4px;
+        max-height: 36px;
+        width: fit-content;
+        display: flex;
+
+        @supports (-webkit-touch-callout: none) {
+          padding: 0;
+          max-width: 85px;
+          max-height: 46px;
+        }
+
+        &::before {
+          content: '';
+          display: block;
+          width: 16px;
+          height: 8px;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='9' viewBox='0 0 16 9' fill='none'%3E%3Cline x1='1.53125' y1='2.34766' x2='15.4062' y2='2.34766' stroke='%23434343'/%3E%3Ccircle cx='1.53125' cy='2.27344' r='1.03125' fill='%23434343' stroke='%23434343'/%3E%3Cline x1='13.875' y1='6.6543' x2='-4.37114e-08' y2='6.6543' stroke='%23434343'/%3E%3Ccircle cx='13.875' cy='6.72852' r='1.03125' transform='rotate(-180 13.875 6.72852)' fill='%23434343' stroke='%23434343'/%3E%3C/svg%3E");
+          background-position: center;
+          background-size: 100%;
+          background-repeat: no-repeat;
+          margin-right: 18.5px;
+
+          @supports (-webkit-touch-callout: none) {
+            margin-right: 3.5px;
+          }
+
+          @include phone-2 {
+            margin-right: 10.5px;
+          }
+        }
+
+        .filterPopupTitle {
+          font-weight: 500;
+          font-size: 17px;
+          line-height: 14px;
+          text-transform: capitalize;
+          color: #434343;
+          margin-left: 0;
+        }
+
+        .filterPopupArrowIcon {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .orderBy--layout {
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  :global(.vtex-slider-container) {
+    :global(.vtex-slider__selector-container) {
+      top: 4px !important;
+      width: 18px;
+      height: 18px;
+      background: $c-main-green;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      :global(.vtex-slider__selector) {
+        height: 8px !important;
+        width: 8px !important;
+        background: #eeeeee;
+      }
+    }
+
+    :global(.vtex-slider__values-container) {
+      justify-content: space-between;
+      margin-top: 7px;
+
+      :global(.vtex-slider__left-value),
+      :global(.vtex-slider__right-value) {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 15px;
+        color: $c-main-black-light;
+      }
+
+      :global(.vtex-slider__dash) {
+        display: none;
+      }
+    }
+  }
+
+  .orderBy--layout {
+    .orderByDropdown {
+      display: flex;
+      align-items: center;
+      padding: 0px;
+
+      &::before {
+        content: 'Ordernar por:';
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 17px;
+        color: #434343;
+        min-width: 130px;
+
+        @include mobile {
+          display: none;
+          font-size: 12px;
+          min-width: 92px;
+        }
+      }
+
+      .orderByButton {
+        border: 2px solid #e5e5e5;
+        background: #ffffff;
+        border-radius: 4px;
+        padding: 8px;
+        min-width: 140px;
+        width: 135px;
+        position: relative;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+
+        @include mobile {
+          min-width: 128px;
+          padding: 9px 10px;
+        }
+
+        @include phone-2 {
+          padding-left: 7px;
+          padding-right: 7px;
+
+          &::before {
+            margin-right: 7px;
+          }
+        }
+      }
+
+      .filterPopupTitle {
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 14px;
+        color: #434343;
+        text-transform: none;
+
+        @include mobile {
+          font-weight: 500;
+        }
+
+        .orderByText {
+          display: none;
+        }
+      }
+
+      .filterPopupArrowIcon {
+        padding: 0;
+        padding-left: 10px;
+        min-width: 9px;
+        display: flex;
+
+        @include mobile {
+          display: none;
+        }
+
+        .caretIcon {
+          width: 100%;
+          height: 100%;
+          margin-bottom: -10px;
+        }
+      }
+
+      .orderByOptionsContainer {
+        z-index: 9;
+        box-shadow: 0px 5px 10px rgba(55, 52, 53, 0.08);
+        border-radius: 4px;
+        border: none;
+        top: 48px;
+        max-width: 200px;
+
+        @include mobile {
+          min-width: 128px;
+          left: 0;
+        }
+
+        .orderByOptionItem {
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 16px;
+          text-align: center;
+          color: $c-main-black-dark;
+          font-family: 'Montserrat';
+          padding: 15px 0;
+          border-radius: 4px;
+
+          @include mobile {
+            min-width: 128px;
+          }
+
+          &:first-child {
+            border-radius: 4px 4px 0 0;
+          }
+
+          &:last-child {
+            border-radius: 0 0 4px 4px;
+          }
+
+          &:not(:last-child) {
+            border-bottom: 1px solid #eff1f2;
+          }
+
+          &--selected {
+            font-weight: 600;
+            background: #eff1f2;
+          }
+        }
+      }
+    }
+  }
+
+  .gallery {
+    padding: 0px 30px;
+    row-gap: 40px;
+
+    @include mobile {
+      padding-left: 0 !important;
+      padding: 0px 0;
+      margin: 5px auto 0;
+
+      &--list {
+        padding: 0;
+
+        :global(.vtex-product-summary-2-x-containerNormal) {
+          @include phone-2 {
+            max-width: 640px !important;
+            min-width: 300px;
+          }
+
+          @include phone-small {
+            min-width: 100%;
+          }
+        }
+      }
+
+      .galleryItem {
+        padding: 0 10.7px;
+      }
+    }
+
+    //   :global(.vtex-rich-text-0-x-paragraph--btn-comprar-novo) {
+    //   bottom: 185px;
+    //    @include mobile {
+    //       display: none;
+    //     }
+    // }
+    // }
+
+    // .gallery--list :global(.vtex-rich-text-0-x-paragraph--btn-comprar-novo) {
+    //   bottom: 175px;
+    //    @include mobile {
+    //       display: none;
+    //     }
+  }
+
+  .showingProducts {
+    font-size: 0;
+    display: flex;
+    align-items: center;
+    padding: 0;
+
+    .showingProductsCount {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      text-transform: uppercase;
+      color: $c-main-black-dark;
+
+      &::after {
+        content: 'Produtos';
+        margin-left: 5px;
+      }
+    }
+  }
+
+  .galleryLayoutSwitcher {
+    @include mobile {
+      filter: drop-shadow(0px 5px 10px rgba(55, 52, 53, 0.08));
+      background: $c-main-white;
+      padding: 9px 13px;
+      width: fit-content;
+      border: 2px solid #e5e5e5;
+      border-radius: 4px;
+      gap: 15px;
+    }
+
+    .galleryLayoutOptionButton {
+      @include mobile {
+        padding: 0px;
+      }
+
+      &--selected {
+        :global(.vtex-store-components-3-x-imageElement) {
+          filter: brightness(0) saturate(100%);
+
+          @include mobile {
+            filter: brightness(0) saturate(100%);
+          }
+        }
+      }
+    }
+  }
+
+  .buttonShowMore {
+    margin-top: 50px;
+
+    :global(.vtex-button) {
+      background: #baab95;
+      border-radius: 4px;
+      height: 44px;
+      width: 177px;
+      border: none;
+
+      :global(.vtex-button__label) {
+        font-weight: 600;
+        font-size: 0;
+        line-height: 14px;
+        color: $c-main-white;
+        text-transform: initial;
+
+        &::before {
+          content: 'Ver mais';
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+.sidebar {
+  width: 86%;
+  height: fit-content;
+
+  .filterAccordionBreadcrumbs,
+  .filter__container--title {
+    height: fit-content;
+    padding: 8px 16px;
+    background-color: #afa089;
+    border: 0px;
+
+    .filterBreadcrumbsContent {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      padding: 0px;
+
+      .filterBreadcrumbsText {
+        font-weight: 500;
+        font-size: 12px;
+        color: #fff;
+      }
+    }
+  }
+
+  .closeIconButton {
+    top: 8px;
+    right: 1rem;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+
+    .closeIcon {
+      width: 24px;
+      display: none;
+    }
+
+    &::after {
+      content: '';
+      height: 11px;
+      width: 10px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='11' viewBox='0 0 10 11' fill='none'%3E%3Cpath d='M0.317702 10.4727L4.45739 4.77532V6.15054L0.514161 0.649671H2.57699L5.50985 4.71919L4.66788 4.73323L7.57268 0.649671H9.55131L5.63615 6.05231V4.73323L9.8039 10.4727H7.69897L4.61175 6.15054H5.43969L2.39456 10.4727H0.317702Z' fill='white'/%3E%3C/svg%3E");
+    }
+  }
+
+  .accordionFilter {
+    @include mobile {
+      padding-bottom: 80px;
+      height: fit-content;
+      max-height: calc(100vh - 80px);
+    }
+
+    .accordionFilterContainer {
+      padding: 0px 1rem;
+      border-top: 1px solid #cacaca;
+
+      .filterAccordionItemBox {
+        border: none;
+        min-height: auto;
+      }
+
+      .accordionFilterItem {
+        padding: 0;
+
+        .accordionFilterContent {
+          padding: 12px 0;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .accordionFilterItemTitle {
+            font-weight: 300;
+            font-size: 12px;
+            color: #434343;
+          }
+
+          .accordionFilterItemIcon {
+            float: initial;
+
+            .caretIcon {
+              width: 10px;
+              height: 10px;
+            }
+          }
+        }
+      }
+    }
+
+    .accordionFilterItemTag {
+      margin-right: auto;
+      margin-left: 15px;
+
+      :global(.vtex-tag) {
+        background: #9f8d79;
+      }
+    }
+
+    .accordionFilterOpen {
+      padding: 0;
+      margin-left: -26px;
+      padding-bottom: 26px;
+
+      .filterAccordionItemBox {
+        border: none;
+        padding: 0;
+        min-height: fit-content;
+
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+
+        :global(.vtex-checkbox__line-container) {
+          align-items: center;
+
+          :global(.vtex-checkbox__container) {
+            margin-right: 13px;
+            width: 20px;
+            height: 16px;
+
+            :global(.vtex-checkbox__inner-container) {
+              margin-right: 10px;
+              border: 1px solid $c-main-black-light;
+              border-radius: 2px;
+            }
+
+            :global(.vtex-checkbox__box) {
+              :global(.vtex__icon-check) {
+                filter: invert(80%) sepia(1%) saturate(2479%) hue-rotate(289deg)
+                  brightness(99%) contrast(83%);
+                width: 14px;
+                height: 14px;
+              }
+            }
+          }
+
+          :global(.vtex-checkbox__label) {
+            font-weight: 300;
+            font-size: 12px;
+            color: #434343;
+            text-transform: initial;
+          }
+        }
+      }
+
+      &--cor {
+        @include mobile {
+          display: flex;
+          column-gap: 26px;
+          flex-wrap: wrap;
+          margin-right: 80px;
+
+          .filterAccordionItemBox {
+            @include color-category-filter;
+
+            :global(.vtex-checkbox__line-container) {
+              :global(.vtex-checkbox__container) {
+                :global(.vtex-checkbox__inner-container) {
+                  border: none;
+                }
+              }
+
+              :global(.vtex-checkbox__label) {
+                display: none;
+              }
+            }
+          }
+
+          .filterAccordionItemBox,
+          :global(.vtex-checkbox__label),
+          :global(.vtex-checkbox__line-container),
+          :global(.vtex-checkbox__container),
+          :global(.vtex-checkbox__inner-container),
+          :global(.vtex-checkbox__box-wrapper),
+          :global(.vtex-checkbox__input) {
+            width: 31px;
+            height: 31px;
+          }
+        }
+      }
+    }
+
+    .accordionFilterItemOptions {
+      margin-left: -35px;
+      max-width: 330px;
+
+      .filter__container--priceRange {
+        border: none;
+        padding-bottom: 85px;
+
+        @include mobile {
+          padding-bottom: 35px;
+        }
+
+        .filter {
+          display: none;
+        }
+      }
+    }
+
+    .accordionFilterOpen {
+      margin-left: -26px;
+      max-width: 100%;
+    }
+  }
+
+  :global(.vtex-slider__base-internal) {
+    background-color: #000;
+  }
+
+  :global(.vtex-slider__selector-container) {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #000;
+    box-shadow: 1.48148px 1.48148px 4.44444px rgba(0, 0, 0, 0.1);
+    top: 2px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    :global(.vtex-slider__selector) {
+      background: #000;
+      width: 10px !important;
+      height: 10px !important;
+    }
+  }
+
+  :global(.vtex-slider__values-container) {
+    justify-content: space-between;
+    margin-top: 15px;
+
+    :global(.vtex-slider__left-value),
+    :global(.vtex-slider__right-value) {
+      font-weight: 300;
+      font-size: 12px;
+      color: #434343;
+    }
+
+    :global(.vtex-slider__dash) {
+      display: none;
+    }
+  }
+
+  .filterButtonsBox {
+    height: auto;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    padding: 15px 32px;
+    display: flex;
+    gap: 16px;
+    border-top: 1px solid #cacaca;
+
+    .filterClearButtonWrapper,
+    .filterApplyButtonWrapper {
+      width: 100%;
+      padding: 0;
+      max-width: 312px;
+    }
+
+    .filterClearButtonWrapper {
+      border: 1px solid #9f8d79;
+      border-radius: 4px;
+
+      :global(.vtex-button__label) {
+        font-weight: 400;
+        font-size: 0;
+        text-transform: initial;
+        padding: 0px;
+
+        &::before {
+          content: 'Limpar Filtros';
+          font-size: 11px;
+          color: #9f8d79;
+        }
+      }
+    }
+
+    .filterApplyButtonWrapper {
+      // background: $c-main-green;
+      // border-radius: 4px;
+      // margin-bottom: 34px;
+
+      :global(.vtex-button) {
+        background-color: #9f8d79;
+        border: 0px;
+
+        :global(.vtex-button__label) {
+          font-weight: 600;
+          font-size: 11px;
+          background-color: #9f8d79;
+          border: 1px solid #9f8d79;
+          color: #fff;
+          text-transform: initial;
+          min-height: 25px;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}
+
+// TEST AB FILTER
+.filtersWrapper {
+  gap: 19px;
+
+  .filterTitleSpan {
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    color: #434343 !important;
+    min-width: max-content;
+  }
+
+  .filterIsOpen {
+    .filterTitle {
+      background-color: #fff;
+    }
+  }
+
+  .filterTemplateOverflow {
+    position: absolute !important;
+    background-color: #fff !important;
+    z-index: 10;
+
+    .filterContent {
+      padding: 1rem !important;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #afa089;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: #afa089;
+    }
+
+    .seeMoreButton {
+      font-size: 12px;
+      font-weight: 600;
+      background: #fff;
+      color: #434343;
+      padding: 4px 0px !important;
+    }
+  }
+
+  .filter__container {
+    padding: 0px !important;
+
+    &--detalhe,
+    &--brand,
+    &--priceRange {
+      display: none;
+    }
+
+    .filterItem {
+      width: max-content;
+    }
+
+    &--selectedFilters {
+      margin-bottom: 65px;
+      margin-top: 40px;
+      margin-right: -123px;
+
+      .filterTitleSpan {
+        font-size: 17px !important;
+        font-weight: 500 !important;
+        color: #434343 !important;
+      }
+
+      .filterTemplateOverflow {
+        margin-top: 12px;
+        background-color: transparent !important;
+        display: flex;
+        gap: 16px;
+      }
+
+      :global(.vtex-checkbox__label) {
+        font-size: 12px !important;
+        color: #8f8f8f !important;
+        font-weight: 500 !important;
+      }
+    }
+  }
+
+  .filterIcon {
+    .caretIcon {
+      transform: translateY(4px);
+    }
+  }
+}

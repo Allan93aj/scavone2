@@ -1,0 +1,166 @@
+@use './config/variables' as *;
+@import './config/mixins';
+
+.notiferContainer {
+  background: $c-main-white;
+  box-shadow: 0px 5px 10px rgba(55, 52, 53, 0.08);
+  border-radius: 4px;
+  padding: 26px 40px;
+  max-width: 448px;
+  margin-left: 60px;
+
+  @include mobile {
+    padding: 24px 26px;
+    max-width: 335px;
+    margin: 0 auto;
+  }
+
+  .title {
+    font-size: 0;
+    font-weight: 600;
+    line-height: 24px;
+    color: $c-main-black-dark;
+    margin-bottom: 17px;
+
+    @include mobile {
+      margin-bottom: 9px;
+      width: 284px;
+    }
+
+    &::before {
+      font-size: 20px;
+      content: 'Produto indisponível no momento';
+
+      @include mobile {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .notifyLabel {
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    color: $c-main-black-light;
+    font-size: 0;
+    margin-bottom: 66px;
+
+    @include mobile {
+      margin-bottom: 45px;
+      line-height: 14px;
+    }
+
+    &::before {
+      font-size: 16px;
+      content: 'Não fique triste! Preencha os campos abaixo e nós te avisamos quando ele estiver de volta.';
+
+      @include mobile {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .form {
+    margin-bottom: 0;
+
+    .content {
+      flex-direction: column;
+      margin-top: 0;
+
+      .input {
+        margin-right: 0;
+        position: relative;
+        height: 44px;
+
+        :global(.vtex-input-prefix__group) {
+          border: none;
+        }
+
+        :global(.vtex-styleguide-9-x-input) {
+          border: 0.5px solid rgba($c-main-black-light, 0.4);
+          border-radius: 4px;
+          font-weight: 400;
+          font-size: 12px;
+          text-transform: lowercase;
+          color: $c-main-black-light;
+
+          &:hover,
+          &:focus {
+            border-color: rgba($c-main-black-light, 0.4);
+          }
+
+          &::placeholder {
+            color: #baab9580;
+          }
+        }
+      }
+
+      .inputName {
+        margin-bottom: 44px;
+
+        @include mobile {
+          margin-bottom: 38px;
+        }
+
+        &::before {
+          content: 'Nome';
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 20px;
+          color: $c-main-black-dark;
+          position: absolute;
+          left: 0;
+          top: -27px;
+
+          @include mobile {
+            font-size: 12px;
+          }
+        }
+      }
+
+      .inputEmail {
+        margin-bottom: 26px;
+
+        @include mobile {
+          margin-bottom: 20px;
+        }
+
+        &::before {
+          content: 'Email';
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 20px;
+          color: $c-main-black-dark;
+          position: absolute;
+          left: 0;
+          top: -27px;
+
+          @include mobile {
+            font-size: 12px;
+          }
+        }
+      }
+
+      .submit {
+        margin-bottom: 0;
+
+        :global(.vtex-button) {
+          width: 100%;
+          height: 44px;
+          transition: all 0.2s ease-in-out;
+
+          :global(.vtex-button__label) {
+            font-weight: 600;
+            font-size: 16px;
+            color: $c-main-black-light;
+            text-transform: capitalize;
+
+            @include mobile {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

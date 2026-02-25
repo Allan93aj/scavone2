@@ -1,0 +1,137 @@
+{
+    "custom-bordado#main": {
+        "props": {
+            "monogramOptions": [
+                {
+                    "id": "LeS",
+                    "image": "https://scavone.vteximg.com.br/arquivos/monograma1-SeP.png",
+                    "maxCharacters": 2
+                },
+                {
+                    "id": "s",
+                    "image": "https://scavone.vteximg.com.br/arquivos/monograma2-s.png",
+                    "maxCharacters": 1
+                },
+                {
+                    "id": "osc",
+                    "image": "https://scavone.vteximg.com.br/arquivos/monograma3-osc.png",
+                    "maxCharacters": 3
+                },
+                {
+                    "id": "c",
+                    "image": "https://scavone.vteximg.com.br/arquivos/monograma4-c.png",
+                    "maxCharacters": 1
+                }
+            ],
+            "colorOptions": [
+                {
+                    "id": "azul-claro",
+                    "color": "#C5D5E8",
+                    "name": "Azul Claro"
+                },
+                {
+                    "id": "branco",
+                    "color": "#F5F5F0",
+                    "name": "Branco"
+                },
+                {
+                    "id": "preto",
+                    "color": "#1A1A1A",
+                    "name": "Preto"
+                },
+                {
+                    "id": "rosa-claro",
+                    "color": "#E8D5DD",
+                    "name": "Rosa Claro"
+                },
+                {
+                    "id": "verde-menta",
+                    "color": "#D4E5DC",
+                    "name": "Verde Menta"
+                },
+                {
+                    "id": "laranja",
+                    "color": "#D97940",
+                    "name": "Laranja"
+                },
+                {
+                    "id": "amarelo",
+                    "color": "#E8D999",
+                    "name": "Amarelo"
+                },
+                {
+                    "id": "verde-oliva",
+                    "color": "#5A6B3E",
+                    "name": "Verde Oliva"
+                },
+                {
+                    "id": "roxo",
+                    "color": "#7E7A9E",
+                    "name": "Roxo"
+                },
+                {
+                    "id": "marrom",
+                    "color": "#75513E",
+                    "name": "Marrom"
+                },
+                {
+                    "id": "azul-marinho",
+                    "color": "#2C3E5A",
+                    "name": "Azul Marinho"
+                },
+                {
+                    "id": "cinza",
+                    "color": "#878787",
+                    "name": "Cinza"
+                },
+                {
+                    "id": "rosa-pink",
+                    "color": "#C7617A",
+                    "name": "Rosa Pink"
+                },
+                {
+                    "id": "vermelho",
+                    "color": "#A63A3E",
+                    "name": "Vermelho"
+                },
+                {
+                    "id": "bege",
+                    "color": "#C9B5A0",
+                    "name": "Bege"
+                }
+            ],
+            "fontOptions": [
+                {
+                    "value": "",
+                    "label": "Selecionar",
+                    "fontUrl": ""
+                },
+                {
+                    "value": "parisienne",
+                    "label": "Parisienne",
+                    "fontUrl": "https://fonts.googleapis.com/css2?family=Parisienne&display=swap"
+                },
+                {
+                    "value": "abhaya-libre",
+                    "label": "Abhaya Libre",
+                    "fontUrl": "https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap"
+                },
+                {
+                    "value": "atkinson-hyperlegible",
+                    "label": "Atkinson Hyperlegible",
+                    "fontUrl": "https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+                },
+                {
+                    "value": "castoro-titling",
+                    "label": "Castoro Titling",
+                    "fontUrl": "https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap"
+                },
+                {
+                    "value": "roboto-slab",
+                    "label": "Roboto Slab",
+                    "fontUrl": "https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap"
+                }
+            ]
+        }
+    }
+}

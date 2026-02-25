@@ -1,0 +1,213 @@
+{
+  "vendor": "scavone",
+  "name": "store-components",
+  "version": "0.8.54",
+  "title": "Scavone Store Components",
+  "builders": {
+    "store": "0.x",
+    "docs": "0.x",
+    "react": "3.x"
+  },
+  "scripts": {
+    "postreleasy": "vtex publish --verbose"
+  },
+  "dependencies": {
+    "vtex.css-handles": "1.x",
+    "vtex.store-image": "0.x",
+    "vtex.product-summary": "2.x",
+    "vtex.store-components": "3.x",
+    "vtex.styleguide": "9.x",
+    "vtex.slider": "0.x",
+    "vtex.store-link": "0.x",
+    "vtex.carousel": "2.x",
+    "vtex.shelf": "1.x",
+    "vtex.menu": "2.x",
+    "vtex.minicart": "2.x",
+    "vtex.product-details": "1.x",
+    "vtex.product-kit": "1.x",
+    "vtex.search-result": "3.x",
+    "vtex.device-detector": "0.x",
+    "vtex.login": "2.x",
+    "vtex.my-account": "1.x",
+    "vtex.flex-layout": "0.x",
+    "vtex.rich-text": "0.x",
+    "vtex.store-drawer": "0.x",
+    "vtex.locale-switcher": "0.x",
+    "vtex.product-quantity": "1.x",
+    "vtex.product-identifier": "0.x",
+    "vtex.product-specification-badges": "0.x",
+    "vtex.product-review-interfaces": "1.x",
+    "vtex.telemarketing": "2.x",
+    "vtex.order-placed": "2.x",
+    "vtex.stack-layout": "0.x",
+    "vtex.tab-layout": "0.x",
+    "vtex.responsive-layout": "0.x",
+    "vtex.slider-layout": "0.x",
+    "vtex.iframe": "0.x",
+    "vtex.breadcrumb": "1.x",
+    "vtex.sticky-layout": "0.x",
+    "vtex.add-to-cart-button": "0.x",
+    "vtex.product-context": "0.x",
+    "vtex.disclosure-layout": "1.x",
+    "vtex.order-manager": "0.x",
+    "vtex.order-items": "0.x",
+    "vtex.pixel-manager": "1.x",
+    "vtex.render-runtime": "8.x",
+    "vtex.session-client": "1.x",
+    "vtex.apps-graphql": "3.x",
+    "vtex.product-availability": "0.x"
+  },
+  "settingsSchema": {
+    "title": "Configuração | Minicart Valor Mínimo para Frete Grátis",
+    "type": "object",
+    "access": "public",
+    "bindingBounded": true,
+    "properties": {
+      "freeShippingRegions": {
+        "title": "Frete Grátis por Região",
+        "type": "object",
+        "properties": {
+          "Norte": {
+            "title": "Norte",
+            "type": "object",
+            "properties": {
+              "AC": {
+                "title": "Acre (AC)",
+                "type": "number"
+              },
+              "AP": {
+                "title": "Amapá (AP)",
+                "type": "number"
+              },
+              "AM": {
+                "title": "Amazonas (AM)",
+                "type": "number"
+              },
+              "PA": {
+                "title": "Pará (PA)",
+                "type": "number"
+              },
+              "RO": {
+                "title": "Rondônia (RO)",
+                "type": "number"
+              },
+              "RR": {
+                "title": "Roraima (RR)",
+                "type": "number"
+              },
+              "TO": {
+                "title": "Tocantins (TO)",
+                "type": "number"
+              }
+            }
+          },
+          "Nordeste": {
+            "title": "Nordeste",
+            "type": "object",
+            "properties": {
+              "AL": {
+                "title": "Alagoas (AL)",
+                "type": "number"
+              },
+              "BA": {
+                "title": "Bahia (BA)",
+                "type": "number"
+              },
+              "CE": {
+                "title": "Ceará (CE)",
+                "type": "number"
+              },
+              "MA": {
+                "title": "Maranhão (MA)",
+                "type": "number"
+              },
+              "PB": {
+                "title": "Paraíba (PB)",
+                "type": "number"
+              },
+              "PE": {
+                "title": "Pernambuco (PE)",
+                "type": "number"
+              },
+              "PI": {
+                "title": "Piauí (PI)",
+                "type": "number"
+              },
+              "RN": {
+                "title": "Rio Grande do Norte (RN)",
+                "type": "number"
+              },
+              "SE": {
+                "title": "Sergipe (SE)",
+                "type": "number"
+              }
+            }
+          },
+          "Centro-Oeste": {
+            "title": "Centro-Oeste",
+            "type": "object",
+            "properties": {
+              "DF": {
+                "title": "Distrito Federal (DF)",
+                "type": "number"
+              },
+              "GO": {
+                "title": "Goiás (GO)",
+                "type": "number"
+              },
+              "MT": {
+                "title": "Mato Grosso (MT)",
+                "type": "number"
+              },
+              "MS": {
+                "title": "Mato Grosso do Sul (MS)",
+                "type": "number"
+              }
+            }
+          },
+          "Sudeste": {
+            "title": "Sudeste",
+            "type": "object",
+            "properties": {
+              "ES": {
+                "title": "Espírito Santo (ES)",
+                "type": "number"
+              },
+              "MG": {
+                "title": "Minas Gerais (MG)",
+                "type": "number"
+              },
+              "RJ": {
+                "title": "Rio de Janeiro (RJ)",
+                "type": "number"
+              },
+              "SP": {
+                "title": "São Paulo (SP)",
+                "type": "number"
+              }
+            }
+          },
+          "Sul": {
+            "title": "Sul",
+            "type": "object",
+            "properties": {
+              "PR": {
+                "title": "Paraná (PR)",
+                "type": "number"
+              },
+              "RS": {
+                "title": "Rio Grande do Sul (RS)",
+                "type": "number"
+              },
+              "SC": {
+                "title": "Santa Catarina (SC)",
+                "type": "number"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

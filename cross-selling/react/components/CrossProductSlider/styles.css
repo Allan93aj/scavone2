@@ -1,0 +1,43 @@
+.crossProductSlider {
+  overflow: hidden;
+}
+.crossProductSlider :global(.slick-slider) {
+  position: relative;
+  padding-bottom: 1.875rem;
+}
+.crossProductSlider :global(.slick-slider) :global(.slick-track) {
+  display: flex;
+}
+.crossProductSlider :global(.slick-slider) :global(.slick-dots) {
+  display: flex !important;
+  justify-content: center;
+  gap: 0.5rem;
+  right: 0;
+  bottom: 0;
+}
+.crossProductSlider :global(.slick-slider) :global(.slick-dots) li button {
+  padding: 0;
+  display: flex;
+  align-items: flex-end;
+  width: auto !important;
+}
+.crossProductSlider :global(.slick-slider) :global(.slick-dots) li button::before {
+  display: none !important;
+  content: "" !important;
+}
+.crossProductSlider :global(.slick-slider) :global(.slick-dots) li button::after {
+  content: "";
+  display: flex;
+  width: 30px;
+  height: 2px;
+  border-radius: 0;
+  padding: 0;
+  transition: 0.2s;
+  background: #a1a1a1;
+}
+.crossProductSlider :global(.slick-slider) :global(.slick-dots) :global(.slick-active) button {
+  padding: 0;
+}
+.crossProductSlider :global(.slick-slider) :global(.slick-dots) :global(.slick-active) button::after {
+  height: 0.375rem !important;
+}

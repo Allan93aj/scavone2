@@ -1,0 +1,8 @@
+{
+  "name": "@scavone/checkout-ui-settings",
+  "devDependencies": {
+    "eslint": "^8.25.0",
+    "eslint-config-vtex": "^15.0.1",
+    "prettier": "^2.7.1"
+  }
+}

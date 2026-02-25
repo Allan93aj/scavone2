@@ -1,0 +1,15 @@
+<svg class="dn" height="0" version="1.1" width="0"
+  xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <g id="nav-caret--down">
+      <path xmlns="http://www.w3.org/2000/svg" d="M12 2.03286L7 6L2 2.03286" stroke="#373435" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
+    </g>
+    <g id="nav-caret--up">
+      <path xmlns="http://www.w3.org/2000/svg" d="M2 4.99998L7 1.03284L12 4.99998" stroke="#373435" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
+    </g>
+    <g id="hpa-delete">
+      <path d="M18 6L6 18" stroke="#231F20" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+      <path d="M6 6L18 18" stroke="#231F20" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+    </g>
+  </defs>
+</svg>

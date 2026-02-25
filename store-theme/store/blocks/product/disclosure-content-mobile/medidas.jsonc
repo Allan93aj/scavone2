@@ -1,0 +1,29 @@
+{
+  "disclosure-layout#disclosure-medidas": {
+    "children": [
+      "disclosure-trigger#open-medidas",
+      "disclosure-content#content-medidas"
+    ],
+    "props": {
+      "blockClass": ["disclosure-pdp"]
+    }
+  },
+  "disclosure-trigger#open-medidas": {
+    "children": ["rich-text#trigger-disclosure-mobile-medidas"],
+    "props": {
+      "blockClass": ["disclosure-pdp"]
+    }
+  },
+  "rich-text#trigger-disclosure-mobile-medidas": {
+    "props": {
+      "text": "MEDIDAS"
+    },
+    "title": "Título - Medidas"
+  },
+  "disclosure-content#content-medidas": {
+    "children": ["scavone-product-medidas"],
+    "props": {
+      "blockClass": ["disclosure-pdp"]
+    }
+  }
+}

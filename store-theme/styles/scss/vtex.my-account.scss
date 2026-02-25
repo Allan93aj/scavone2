@@ -1,0 +1,346 @@
+@import './config/mixins';
+@import './config/colors';
+
+:global(.vtex-account) {
+  :global(.pv9-l) {
+    gap: 160px;
+  }
+
+  :global(.c-link) {
+    &:hover {
+      color: $c-main-green;
+      text-decoration: underline;
+    }
+  }
+
+  :global(.c-muted-2) {
+    color: $c-main-black-light;
+  }
+
+  :global(.vtex-input__label),
+  :global(.vtex-dropdown__label) {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+    color: $c-main-black-dark;
+  }
+
+  .menu {
+    padding-right: 0;
+
+    @include mobile {
+      padding-top: 0;
+    }
+
+    @include phone {
+      padding-top: 59px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      padding-left: 0;
+    }
+
+    .userImage {
+      @include phone {
+        display: none;
+      }
+    }
+
+    .userInfo {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+
+      :nth-child(2) {
+        color: $c-main-black-dark;
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 5px;
+      }
+
+      .userImage {
+        margin: 0;
+      }
+
+      .userGreeting {
+        margin: 0;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 20px;
+
+        @include phone {
+          font-weight: 400;
+          font-size: 26px;
+          line-height: 16px;
+        }
+      }
+
+      .userName {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 20px;
+
+        @include phone {
+          font-weight: 600;
+          font-size: 26px;
+          line-height: 16px;
+        }
+      }
+    }
+
+    .menuLinks {
+      @include phone {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        :nth-last-child(1) {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      :global(.pointer) {
+        color: #baab95;
+        font-size: 16px;
+        line-height: 16px;
+
+        @include phone {
+          font-weight: 500;
+          padding-left: 0;
+        }
+      }
+
+      :global(.vtex-account_menu-link) {
+        font-size: 16px;
+        line-height: 16px;
+
+        @include phone {
+          font-weight: 500;
+          color: $c-main-black-light;
+          padding-left: 0;
+        }
+      }
+    }
+  }
+
+  :global(.vtex-account__page) {
+    :global(.vtex-pageHeader__container) {
+      padding: 0 20px 0 10px;
+      max-width: 1000px;
+
+      @include phone {
+        margin-top: 30px;
+        padding: 0 20px;
+      }
+
+      :global(.vtex-pageHeader__title) {
+        font-weight: 500;
+        font-size: 26px;
+        line-height: 30px;
+        margin-bottom: 35px;
+      }
+    }
+
+    :global(.vtex-account__page-body) {
+      .boxContainerFooter {
+        padding-bottom: 23px;
+
+        :global(.vtex-button) {
+          color: $c-main-black-light;
+          text-decoration: underline;
+          transition: 0.2s;
+
+          &:hover {
+            background: $c-main-green;
+            font-weight: 600;
+          }
+        }
+      }
+
+      :global(.vtex-my-authentication-1-x-authenticationScreen_container) {
+        padding: 0;
+
+        :global(.vtex-my-authentication-1-x-maskedPassword_title),
+        :global(.vtex-my-authentication-1-x-loginSessionsBox_title) {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 16px;
+        }
+
+        :global(.vtex-my-authentication-1-x-box_footer) {
+          :global(.vtex-button) {
+            color: $c-main-black-light;
+            text-decoration: underline;
+            transition: 0.2s;
+
+            &:hover {
+              background: $c-main-green;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+
+    .profile {
+      main {
+        @include mobile {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
+      :global(.w-40-ns) {
+        @include mobile {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+
+      :global(.w-60-ns) {
+        @include mobile {
+          width: 100%;
+          max-width: 100% !important;
+        }
+
+        &:first-child {
+          max-width: 460px;
+        }
+      }
+
+      .newsletterBoxContainer {
+        @include mobile {
+          padding-right: 1.2rem;
+        }
+
+        @include phone {
+          padding-right: 0;
+        }
+
+        :global(.vtex__icon-check) {
+          color: $c-main-black-light;
+          width: 20px;
+          background: url('assets/svg/checked-icon.svg') no-repeat center;
+
+          path {
+            display: none;
+
+            &::after {
+              content: url('assets/svg/checked-icon.svg');
+            }
+          }
+        }
+
+        .boxContainerBody {
+          padding: 21px !important;
+
+          .newsletterContainerTitle {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 16px;
+            color: $c-main-black-light;
+          }
+        }
+      }
+
+      .boxContainerBody {
+        padding: 38px 48px 29px;
+
+        :global(.vtex-profile-form-3-x-profileSummary) {
+          display: flex;
+          flex-direction: column;
+
+          :global(.c-on-disabled) {
+            color: $c-main-black-light;
+          }
+
+          .emailContainer {
+            order: 4;
+            margin-bottom: 0;
+          }
+
+          .dataEntryLabel {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 16px;
+            color: $c-main-black-dark;
+          }
+        }
+      }
+    }
+  }
+}
+
+:global(.vtex-flex-layout-0-x-flexCol--col-img-and-comprar) {
+  position: relative;
+}
+
+:global(.vtex-flex-layout-0-x-flexColChild--col-img-and-comprar):nth-child(1) {
+  width: 100%;
+  height: 56px !important;
+  bottom: 0;
+  position: absolute;
+  margin: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.8);
+  display: none;
+}
+
+:global(.vtex-product-summary-2-x-element):hover
+  :global(.vtex-flex-layout-0-x-flexColChild--col-img-and-comprar):nth-child(1) {
+  display: flex;
+  justify-content: center;
+}
+
+:global(.vtex-rich-text-0-x-paragraph--btn-comprar-novo) {
+  color: #000;
+  font-weight: 400;
+  letter-spacing: 0.65px;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+/* ajustes pdp*/
+:global(.scavone-store-components-0-x-productDescriptionContainer--description)
+  :global(.scavone-store-components-0-x-listItem--description):last-child {
+  display: none;
+}
+
+:global(button.scavone-store-components-0-x-trigger) {
+  display: none;
+}
+
+@include mobile {
+  :global(.scavone-store-components-0-x-productDescriptionContainer--description)
+    :global(button.scavone-store-components-0-x-trigger):nth-child(7) {
+    display: none;
+  }
+
+  :global(.vtex-product-summary-2-x-element):hover
+    :global(.vtex-flex-layout-0-x-flexColChild--col-img-and-comprar):nth-child(1) {
+    display: none;
+  }
+}
+
+:global(.vtex-flex-layout-0-x-flexColChild--product-main-left-kitlook) {
+  position: relative;
+}
+:global(.vtex-flex-layout-0-x-flexColChild--product-main-left-kitlook)
+  > :global(.vtex-wish-list-1-x-wishlistIconContainer--wishlist-pdp) {
+  position: absolute !important;
+  top: 10px !important;
+  right: 25px !important;
+  z-index: 10 !important;
+}
+:global(.vtex-flex-layout-0-x-flexColChild--product-main-left-kitlook)
+  > :global(.vtex-wish-list-1-x-wishlistIconContainer--wishlist-pdp)
+  > :global(.vtex-button) {
+  background: none;
+  box-shadow: none;
+}

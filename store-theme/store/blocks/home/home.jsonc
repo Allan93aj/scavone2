@@ -1,0 +1,238 @@
+{
+  "store.home": {
+    "blocks": [
+      "scavone-cookies-custom-styleguide",
+      "scavone-newsletter-modal",
+      "list-context.image-list#home-main-banner",
+      // "custom-countdown-1",
+      "rich-text#shelf-home-1.1",
+      "list-context.product-list#shelf-home-1",
+      "rich-text#category-bullets",
+      "scavone-category-bullet-list#home",
+      "responsive-layout.desktop#image-full",
+      "scavone-collection-list",
+      "responsive-layout.mobile#image-full",
+      "rich-text#shelf-home-2",
+      "list-context.product-list#shelf-home-2",
+      "flex-layout.row#home-sobre"
+    ]
+  },
+  "responsive-layout.desktop#image-full": {
+    "children": ["image#full-width-desktop"],
+    "props": {
+      "blockClass": "image-container",
+      "fullWidth": true
+    }
+  },
+  "image#full-width-desktop": {
+    "props": {
+      "src": "https://placehold.co/1920x750",
+      "alt": "Imagem Responsiva Desktop",
+      "blockClass": "full-image",
+      "width": "100%",
+      "conditions": {
+        "min-width": "1024px"
+      }
+    }
+  },
+  "responsive-layout.mobile#image-full": {
+    "children": ["image#full-width-mobile"],
+    "props": {
+      "blockClass": "image-container",
+      "fullWidth": true
+    }
+  },
+  "image#full-width-mobile": {
+    "props": {
+      "src": "https://placehold.co/400x500",
+      "alt": "Imagem Responsiva Mobile",
+      "blockClass": "full-image-mobile",
+      "width": "100%",
+      "conditions": {
+        "max-width": "1023px"
+      }
+    }
+  },
+  "rich-text#shelf-home-1.1": {
+    "title": "Titulo",
+    "props": {
+      "text": "## LANÇAMENTOS",
+      "blockClass": ["home-title", "home-shelf", "line-top"],
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+  "list-context.product-list#shelf-home-1": {
+    "blocks": ["product-summary.shelf#home"],
+    "children": ["slider-layout#shelf"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "maxItems": 10
+    }
+  },
+  "list-context.image-list#home-main-banner": {
+    "children": ["slider-layout#home-main-banner"],
+    "props": {
+      "height": 200,
+      "images": [
+        {
+          "image": "https://via.placeholder.com/1440x490",
+          "mobileImage": "https://via.placeholder.com/375x466",
+          "description": "Banner principal"
+        },
+        {
+          "image": "https://via.placeholder.com/1440x490",
+          "mobileImage": "https://via.placeholder.com/375x466",
+          "description": "Banner principal"
+        },
+        {
+          "image": "https://via.placeholder.com/1440x490",
+          "mobileImage": "https://via.placeholder.com/375x466",
+          "description": "Banner principal"
+        }
+      ]
+    }
+  },
+  "slider-layout#home-main-banner": {
+    "title": "Banner Principal",
+    "props": {
+      "blockClass": ["home-main-banner", "carousel-image"],
+      "showNavigationArrows": "desktopOnly",
+      "showPaginationDots": "always",
+      "autoplay": {
+        "timeout": 3000
+      },
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": true
+    }
+  },
+  "rich-text#category-bullets": {
+    "title": "Título - Categoria",
+    "props": {
+      "text": "## BUSQUE POR CATEGORIAS",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "home-title-bullets"
+    }
+  },
+  "scavone-category-bullet-list#home": {
+    "props": {
+      "blockClass": "home",
+      "items": [
+        {
+          "image": "https://dummyimage.com/302x302/d4d4d4/fff",
+          "href": "/cama",
+          "text": "CAMA"
+        },
+        {
+          "image": "https://dummyimage.com/302x302/d4d4d4/fff",
+          "href": "/ambientacoes",
+          "text": "AMBIENTAÇÕES"
+        },
+        {
+          "image": "https://dummyimage.com/302x302/d4d4d4/fff",
+          "href": "/banho",
+          "text": "BANHO"
+        },
+        {
+          "image": "https://dummyimage.com/302x302/d4d4d4/fff",
+          "href": "/aromas",
+          "text": "AROMAS"
+        }
+      ]
+    }
+  },
+  "scavone-collection-list": {
+    "props": {
+      "blockClass": "home-collection",
+      "infinite": true,
+      "items": [
+        {
+          "image": "https://dummyimage.com/820x456/d4d4d4/fff",
+          "imageMobile": "https://dummyimage.com/375x334/d4d4d4/fff",
+          "alt": "",
+          "href": "/cama",
+          "title": "### BAMBINI \n ### 2022 ",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit ac fusce cras posuere platea lectus praesent orci. Quam tempus, mauris a accumsan ultricies erat vel amet. Maecenas varius leo facilisi maecenas. Rutrum in nisl id sagittis commodo proin. Non eget maecenas ullamcorper urna.",
+          "subTitle": "COLEÇÃO",
+          "buttonLabel": "Ver Coleção"
+        },
+        {
+          "image": "https://dummyimage.com/820x456/d4d4d4/fff",
+          "imageMobile": "https://dummyimage.com/375x334/d4d4d4/fff",
+          "alt": "",
+          "href": "/ambientacoes",
+          "title": "### MARIE BAIXA \n ### 2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit ac fusce cras posuere platea lectus praesent orci. Quam tempus, mauris a accumsan ultricies erat vel amet. Maecenas varius leo facilisi maecenas. Rutrum in nisl id sagittis commodo proin. Non eget maecenas ullamcorper urna.",
+          "subTitle": "COLEÇÃO",
+          "buttonLabel": "Ver Coleção"
+        },
+        {
+          "image": "https://dummyimage.com/820x456/d4d4d4/fff",
+          "imageMobile": "https://dummyimage.com/375x334/d4d4d4/fff",
+          "alt": "",
+          "href": "/banho",
+          "title": "### LEAVES \n ### 2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit ac fusce cras posuere platea lectus praesent orci. Quam tempus, mauris a accumsan ultricies erat vel amet. Maecenas varius leo facilisi maecenas. Rutrum in nisl id sagittis commodo proin. Non eget maecenas ullamcorper urna.",
+          "subTitle": "COLEÇÃO",
+          "buttonLabel": "Ver Coleção"
+        }
+      ]
+    }
+  },
+  "rich-text#shelf-home-2": {
+    "title": "Titulo - Vitrine 2 ",
+    "props": {
+      "text": "## MAIS VENDIDOS",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": ["home-title", "home-shelf"]
+    }
+  },
+  "list-context.product-list#shelf-home-2": {
+    "blocks": ["product-summary.shelf#home"],
+    "children": ["slider-layout#shelf"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "maxItems": 10
+    }
+  },
+  "scavone-newsletter-modal": {
+    "props": {
+      "title": "Inscreva-se e ganhe <b>10%OFF</b> na sua primeira compra",
+      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam. Lorem ipsum dolor sit amet, consectetur adelit ut.",
+      "texto": "Primeira vez aqui?",
+      "termos": "Aceito receber informes publicitários e promoções através da newsletter.",
+      "src": "https://via.placeholder.com/430x500",
+      "width": 430,
+      "height": "100%",
+      "alt": "",
+      "blockClass": "newsletter-modal",
+      "socialMedia": [
+        {
+          "src": "assets/svg/social/facebookModal.svg",
+          "width": 30,
+          "alt": "Facebook",
+          "href": ""
+        },
+        {
+          "src": "assets/svg/social/instagramModal.svg",
+          "width": 30,
+          "alt": "Instagram",
+          "href": ""
+        },
+        {
+          "src": "assets/svg/social/youtubeModal.svg",
+          "width": 30,
+          "alt": "YouTube",
+          "href": ""
+        }
+      ]
+    }
+  }
+}

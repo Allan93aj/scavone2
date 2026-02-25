@@ -1,0 +1,37 @@
+@use './config/variables' as *;
+
+.wrapper {
+  &--header {
+    z-index: 12;
+  }
+
+  .container {
+    &--header {
+      padding: 0 20px;
+      background-color: $c-main-white;
+      box-shadow: 0px 5px 10px rgba(55, 52, 53, 0.08);
+
+      @include mobile {
+        padding: 13px 20px 0;
+      }
+    }
+
+    :global(.vtex-flex-layout-0-x-flexRow--header-mobile-sticky) {
+      display: none;
+    }
+  }
+}
+
+.wrapper--stuck {
+  .container {
+    &--header {
+      :global(.vtex-flex-layout-0-x-flexRow--header-mobile) {
+        display: none !important;
+      }
+
+      :global(.vtex-flex-layout-0-x-flexRow--header-mobile-sticky) {
+        display: flex;
+      }
+    }
+  }
+}

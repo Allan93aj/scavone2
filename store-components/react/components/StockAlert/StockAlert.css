@@ -1,0 +1,23 @@
+.stockAlertContainer {
+  margin-top: 12px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.stockAlertLow {
+  background-color: #ffe6e6;
+  border: 1px solid #ff4d4d;
+  color: #b30000;
+}
+
+.stockAlertNormal {
+  background-color: #e8f8e8;
+  border: 1px solid #4CAF50;
+  color: #2e7d32;
+}
+
+.stockAlertText {
+  font-weight: 600;
+}

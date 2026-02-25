@@ -1,0 +1,63 @@
+.freeShippingCep__container {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 1rem;
+}
+
+.freeShippingCep__content {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #ceccc3;
+  background: white;
+  border-radius: 0.5rem;
+}
+
+.freeShippingCep__inputCep {
+  outline: none;
+  border: 0;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+}
+
+.freeShippingCep__submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  cursor: pointer;
+  background: #ceccc3;
+  border-radius: 0.35rem;
+}
+
+.freeShippingCep__submit svg {
+  width: 80%;
+  padding: 0.5rem 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: #000;
+}
+
+.freeShippingCep__DontKnowCep {
+  display: flex;
+  justify-content: right;
+}
+
+.freeShippingCep__DontKnowCep a {
+  font-size: 0.75rem;
+  color: #858585;
+  font-weight: 600;
+  margin: 0.25rem 0;
+}
+
+.freeShippingCep__textCep p {
+  font-size: 0.85rem;
+  color: #000;
+  line-height: 1;
+  margin: 0.5rem 0;
+  font-size: 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  max-width: 80%;
+
+}

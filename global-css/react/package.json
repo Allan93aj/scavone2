@@ -1,0 +1,26 @@
+{
+  "name": "@scavone/store-components",
+  "dependencies": {
+    "apollo-client": "^2.6.8",
+    "react": "^16.13.1",
+    "react-apollo": "^3.1.5",
+    "react-dom": "^16.13.1",
+    "react-intl": "4.5.0",
+    "react-xml-parser": "^1.1.8"
+  },
+  "devDependencies": {
+    "@apollo/react-testing": "^3.1.4",
+    "@types/jest": "^27.5.0",
+    "@types/node": "^17.0.31",
+    "@types/react": "^18.0.8",
+    "@vtex/test-tools": "^3.1.0",
+    "@vtex/tsconfig": "^0.6.0",
+    "apollo-cache-inmemory": "^1.6.6",
+    "typescript": "3.9.7",
+    "vtex.render-runtime": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.134.2/public/@types/vtex.render-runtime"
+  },
+  "scripts": {
+    "lint": "tsc --noEmit && eslint --quiet --fix --ext ts,tsx .",
+    "test": "vtex-test-tools test"
+  }
+}

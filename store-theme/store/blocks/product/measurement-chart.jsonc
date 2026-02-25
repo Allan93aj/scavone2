@@ -1,0 +1,49 @@
+{
+  "modal-trigger#measurement-chart": {
+    "children": [
+      "rich-text#measurement-chart-trigger",
+      "modal-layout#measurement-chart"
+    ],
+    "props": {
+      "blockClass": "measurement-chart"
+    }
+  },
+  "rich-text#measurement-chart-trigger": {
+    "props": {
+      "text": "Tabela de medidas",
+      "blockClass": ["measurement-chart-trigger"]
+    }
+  },
+  "modal-layout#measurement-chart": {
+    "children": ["modal-header", "image#measurement-chart"],
+    "props": {
+      "blockClass": "measurement-chart"
+    }
+  },
+  "modal-header": {
+    "props": {
+      "showCloseButton": true
+    }
+  },
+  "image#measurement-chart": {
+    "props": {
+      "src": "/arquivos/medidas-scavone-1.png"
+    }
+  },
+  "scavone-measurement-chart": {
+    "children": ["modal-trigger#measurement-chart"],
+    "props": {
+      "categories": [
+        {
+          "category": "aromas"
+        },
+        {
+          "category": "banho"
+        },
+        {
+          "category": "mesa"
+        }
+      ]
+    }
+  }
+}

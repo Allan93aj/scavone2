@@ -1,0 +1,29 @@
+{
+  "disclosure-layout#disclosure-instruction": {
+    "children": [
+      "disclosure-trigger#open-instruction",
+      "disclosure-content#content-instruction"
+    ],
+    "props": {
+      "blockClass": ["disclosure-pdp"]
+    }
+  },
+  "disclosure-trigger#open-instruction": {
+    "children": ["rich-text#trigger-disclosure-mobile-instruction"],
+    "props": {
+      "blockClass": ["disclosure-pdp"]
+    }
+  },
+  "rich-text#trigger-disclosure-mobile-instruction": {
+    "props": {
+      "text": "INSTRUÇÕES/CUIDADOS"
+    },
+    "title": "Título - INSTRUÇÕES"
+  },
+  "disclosure-content#content-instruction": {
+    "children": ["scavone-product-instruction"],
+    "props": {
+      "blockClass": ["disclosure-pdp"]
+    }
+  }
+}

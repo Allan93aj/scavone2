@@ -1,0 +1,22 @@
+{
+  "scavone-institutional-menu": {
+    "props": {
+      "items": [
+        {
+          "label": "POLÍTICA DE PRIVACIDADE",
+          "href": "/institucional/politica-de-privacidade"
+        },
+        {
+          "label": "POLÍTICAS DE TROCAS",
+          "href": "/institucional/politica-de-troca"
+        },
+        {
+          "label": "FALE CONOSCO",
+          "href": "/institucional/fale-conosco"
+        }
+      ],
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true
+    }
+  }
+}

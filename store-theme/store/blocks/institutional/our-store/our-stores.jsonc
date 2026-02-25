@@ -1,0 +1,58 @@
+{
+  "store.custom#our-stores": {
+    "children": ["flex-layout.row#our-stores"]
+  },
+  "flex-layout.row#our-stores": {
+    "children": ["flex-layout.col#our-stores"],
+    "title": "Nossas Lojas",
+    "props": {
+      "blockClass": ["our-stores"],
+      "fullWidth": true
+    }
+  },
+  "flex-layout.col#our-stores": {
+    "children": [
+      "rich-text#institucional-breadcrumb",
+      "scavone-banner#our-stores",
+      "scavone-stores"
+    ],
+    "props": {
+      "blockClass": ["our-stores"]
+    }
+  },
+  "scavone-banner#our-stores": {
+    "props": {
+      "src": "https://via.placeholder.com/2880x365",
+      "srcMobile": "https://via.placeholder.com/750x400",
+      "width": 2880,
+      "height": 365,
+      "alt": "",
+      "heightMobile": 400,
+      "widthMobile": 750,
+      "textPosition": "left",
+      "blockClass": "instBanner"
+    }
+  },
+  "scavone-stores": {
+    "props": {
+      "stores": [
+        {
+          "src": "https://via.placeholder.com/847x422",
+          "alt": "",
+          "height": 422,
+          "width": 847,
+          "city": "Itatiba - SP",
+          "street": "Av. Senador Lacerda Franco, 225 - Centro",
+          "week": "Das 9h00 às 18h00.",
+          "saturday": "Das 9h00 às 17h00.",
+          "sunday": "Fechado",
+          "obs": "*Horário sujeito a alteração sem aviso prévio.",
+          "whatsappNumber": "(11) 99248-5905",
+          "phone": "(11) 4524-9283",
+          "whatsappUrl": "http://wa.me/5511991142203?text=Olá!&utmi_p=_institucional_sobre-nos&utmi_pc=Html&utmi_cp=whatsAppFloat",
+          "googleUrl": "https://g.page/scavonecasa_jundiai?share"
+        }
+      ]
+    }
+  }
+}

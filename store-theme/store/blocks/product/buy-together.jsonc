@@ -1,0 +1,165 @@
+{
+  "scavone-cross-selling-provider#buy-together": {
+    "title": "Compre junto",
+    "props": {
+      "endPoint": "/api/catalog_system/pub/products/crossselling/showtogether/{productId}",
+      "syncVariation": "Tamanho"
+    },
+    "children": [
+      "rich-text#buy-together",
+      "flex-layout.row#buy-together-products-container"
+    ]
+  },
+  "rich-text#buy-together": {
+    "props": {
+      "blockClass": ["buy-together"],
+      "text": "Compre junto"
+    }
+  },
+  "flex-layout.row#buy-together-products-container": {
+    "children": [
+      "flex-layout.col#main-product-buy-together",
+      "flex-layout.col#plus-sign",
+      "flex-layout.col#product-list-buy-together",
+      "flex-layout.col#equal-sign",
+      "flex-layout.col#buy-together-total-info"
+    ],
+    "props": {
+      "blockClass": ["buy-together-products-container"],
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true
+    }
+  },
+  "flex-layout.col#main-product-buy-together": {
+    "children": ["scavone-buy-together-product"],
+    "props": {
+      "blockClass": ["main-product-buy-together"]
+    }
+  },
+  "vtex.store-components@3.x:product-name#buy-together": {
+    "props": {
+      "tag": "h3",
+      "blockClass": "buy-together"
+    }
+  },
+  "scavone-single-product-image#buy-together": {
+    "props": {
+      "blockClass": ["buy-together"]
+    }
+  },
+  "flex-layout.col#plus-sign": {
+    "children": ["image#buy-together-plus-sign"],
+    "props": {
+      "blockClass": ["plus-sign"]
+    }
+  },
+  "flex-layout.col#equal-sign": {
+    "children": ["image#buy-together-equal-sign"],
+    "props": {
+      "blockClass": ["equal-sign"]
+    }
+  },
+  "image#buy-together-plus-sign": {
+    "props": {
+      "src": "assets/svg/buy-together-plus-sign.svg",
+      "blockClass": ["plus-sign"]
+    }
+  },
+  "image#buy-together-equal-sign": {
+    "props": {
+      "src": "assets/svg/buy-together-equal-sign.svg",
+      "blockClass": ["plus-sign"]
+    }
+  },
+  "flex-layout.col#product-list-buy-together": {
+    "children": ["scavone-cross-product-list#buy-together"],
+    "props": {
+      "blockClass": ["product-list-buy-together"],
+      "preventVerticalStretch": true
+    }
+  },
+  "scavone-cross-product-list#buy-together": {
+    "blocks": ["scavone-cross-product-summary#buy-together"],
+    "props": {
+      "blockClass": "buy-together"
+    }
+  },
+  "scavone-cross-product-summary#buy-together": {
+    "children": [
+      "flex-layout.row#summary-image#buy-together",
+      "flex-layout.col#summary-info#buy-together"
+    ],
+    "props": {
+      "blockClass": ["buy-together"]
+    }
+  },
+  "flex-layout.row#summary-image#buy-together": {
+    "children": [
+      "scavone-cross-product-checkbox#buy-together",
+      "scavone-cross-product-image#buy-together"
+    ],
+    "props": {
+      "blockClass": ["summary-image-buy-together"],
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true
+    }
+  },
+  "scavone-cross-product-checkbox#buy-together": {
+    "props": {
+      "blockClass": "buy-together"
+    }
+  },
+  "flex-layout.col#summary-info#buy-together": {
+    "children": [
+      "scavone-cross-product-name#buy-together",
+      "scavone-cross-product-selling-price#buy-together"
+    ],
+    "props": {
+      "blockClass": ["summary-info-buy-together"],
+      "preventVerticalStretch": true
+    }
+  },
+  "scavone-cross-product-image#buy-together": {
+    "props": {
+      "blockClass": ["product-image-buy-together"]
+    }
+  },
+  "scavone-cross-product-name#buy-together": {
+    "props": {
+      "blockClass": ["buy-together"]
+    }
+  },
+  "scavone-cross-product-selling-price#buy-together": {
+    "props": {
+      "message": "{value}"
+    }
+  },
+  "flex-layout.col#buy-together-total-info": {
+    "children": [
+      "scavone-cross-selling-items-quantity",
+      "scavone-cross-selling-price#buy-together",
+      "scavone-buy-together-installments",
+      "scavone-cross-add-to-cart-button#buy-together"
+    ],
+    "props": {
+      "blockClass": ["buy-together-total-info"]
+    }
+  },
+  "scavone-cross-selling-items-quantity": {
+    "props": {
+      "message": "Compre junto mais {quantity} por:"
+    }
+  },
+  "scavone-cross-add-to-cart-button#buy-together": {
+    "props": {
+      "text": "Comprar junto",
+      "blockClass": "buy-together"
+    }
+  },
+  "scavone-cross-selling-price#buy-together": {
+    "props": {
+      "message": "Valor total: {value}",
+      "blockClass": "buy-together"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "extends": "@vtex/tsconfig",
+  "compilerOptions": {
+    "noEmitOnError": false,
+    "lib": ["dom"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "target": "es2017"
+  },
+  "include": [
+    "./typings/*.d.ts",
+    "./**/*.tsx",
+    "./**/*.ts",
+    "DepartmentBanner.jsx",
+    "components/DepartmentBanner/DepartmentBanner.jsx",
+    "Countdown.tsx",
+    "components/Countdown1/Countdown1.jsx",
+    "CustomCountdown.jsx"
+  ]
+}

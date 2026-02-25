@@ -1,0 +1,55 @@
+@use './config/variables' as *;
+
+.quantitySelectorContainer {
+  border: 1px solid $c-main-brown;
+  border-radius: $border-radius-pattern;
+  margin: 0;
+  overflow: hidden;
+  background: $c-main-white;
+  width: 7.5625rem;
+
+  @include mobile {
+    justify-content: initial;
+
+    &--pdp-quantity {
+      max-width: 30%;
+    }
+  }
+
+  .quantitySelectorStepper {
+    margin: auto;
+
+    :global(.vtex-numeric-stepper__plus-button),
+    :global(.vtex-numeric-stepper__minus-button),
+    :global(.vtex-numeric-stepper__input) {
+      border: none;
+      background: $c-main-white;
+      width: auto !important;
+    }
+
+    :global(.vtex-numeric-stepper-container) {
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+    }
+
+    :global(.vtex-numeric-stepper__input) {
+      font-size: 16px;
+      font-weight: 500;
+      max-width: 30px;
+      width: 30px;
+    }
+
+    :global(.vtex-numeric-stepper__minus-button__text),
+    :global(.vtex-numeric-stepper__plus-button__text) {
+      color: $c-main-black-light;
+      font-size: 17.62px;
+      font-weight: 400;
+    }
+
+    :global(.vtex-numeric-stepper__minus-button-container),
+    :global(.vtex-numeric-stepper__plus-button-container) {
+      max-width: 32px;
+    }
+  }
+}

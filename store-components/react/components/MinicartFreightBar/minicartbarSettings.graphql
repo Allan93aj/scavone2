@@ -1,0 +1,6 @@
+query AppSettings {
+  publicSettingsForApp(app: "scavone.store-components", version: "x")
+    @context(provider: "vtex.apps-graphql") {
+    message
+  }
+}

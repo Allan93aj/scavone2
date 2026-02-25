@@ -1,0 +1,36 @@
+.banner-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.banner-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; 
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  pointer-events: none;
+  margin: 0;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+.banner-image {
+  width: 100%;
+}
+
+:global(.scavone-store-components-0-x-imageContainer--search-banner){
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .banner-image {
+    display: none;
+  }
+}
+

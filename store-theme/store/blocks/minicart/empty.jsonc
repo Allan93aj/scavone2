@@ -1,0 +1,26 @@
+{
+  "minicart-empty-state": {
+    "children": [
+      "image#minicart-empty",
+      "rich-text#minicart-empty-state",
+      "link#keep-buying"
+    ]
+  },
+  "image#minicart-empty": {
+    "title": "Cart Icon",
+    "props": {
+      "src": "assets/svg/bag-icon.svg",
+      "height": 101,
+      "width": 92,
+      "blockClass": "minicart-empty-state"
+    }
+  },
+  "rich-text#minicart-empty-state": {
+    "props": {
+      "text": "**Sua sacola está vazia** \n Adicione itens em sua sacola",
+      "blockClass": "minicart-empty-state",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  }
+}

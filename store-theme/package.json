@@ -1,0 +1,20 @@
+{
+  "name": "@scavone/store-theme",
+  "scripts": {
+    "start": "concurrently \"npm:sass\" \"npm:vlink\"",
+    "vlink": "vtex link --verbose",
+    "sass": "sass --watch --no-source-map styles/scss:styles/css --style compressed",
+    "build": "sass --no-source-map styles/scss:styles/css --style compressed"
+  },
+  "devDependencies": {
+    "@vtex/danger": "^0.2.9",
+    "@vtex/intl-equalizer": "^2.5.1",
+    "@vtex/prettier-config": "0.1.4",
+    "concurrently": "^5.3.0",
+    "eslint": "^8.14.0",
+    "eslint-config-vtex": "^15.0.0",
+    "eslint-config-vtex-react": "^9.0.0",
+    "prettier": "2.0.2",
+    "sass": "^1.32.7"
+  }
+}

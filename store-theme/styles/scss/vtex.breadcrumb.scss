@@ -1,0 +1,115 @@
+@use './config/variables' as *;
+
+.container {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 39px;
+  max-width: $max-width-global;
+  padding: 15px 1rem 0;
+
+  @include mobile {
+    padding-left: 20px;
+    margin-bottom: 12px;
+    margin-top: 15px;
+    display: none;
+  }
+
+  &--search {
+    width: 100%;
+    padding: 0;
+    margin: 15px 0 20px;
+
+    @include mobile {
+      padding-left: 17px;
+      margin-bottom: 12px;
+      margin-top: 30px;
+    }
+  }
+
+  .homeLink {
+    &::before {
+      content: 'Home';
+      font-size: 12px;
+      text-transform: uppercase;
+      color: $c-main-black-light;
+    }
+  }
+
+  .homeIcon {
+    display: none;
+  }
+
+  .homeLink {
+    display: flex;
+    align-items: center;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 12px;
+      background-color: $c-main-black-light;
+      margin-left: 10px;
+    }
+  }
+
+  .arrow,
+  .link,
+  .term {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    text-transform: uppercase;
+    color: $c-main-black-light;
+  }
+
+  .term {
+    font-weight: 600;
+    padding-left: 7px;
+  }
+
+  .arrow {
+    display: flex;
+    align-items: center;
+
+    &:last-child {
+      .link {
+        font-weight: 600;
+      }
+    }
+
+    &:not(:last-child) {
+      &::after {
+        content: '';
+        display: block;
+        width: 1px;
+        height: 12px;
+        background-color: $c-main-black-light;
+        margin-left: 10px;
+      }
+    }
+
+    .caretIcon {
+      display: none;
+    }
+  }
+
+  .link,
+  .term {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .link {
+    display: flex;
+    align-items: center;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+}
+
+.termArrow.termArrow.termArrow {
+  display: none;
+}

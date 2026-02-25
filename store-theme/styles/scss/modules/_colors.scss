@@ -1,0 +1,300 @@
+@use 'sass:map';
+
+$cor-lavanda: #c8c5e2;
+
+$colors: (
+  'azul': #d3daeb,
+  'verde-claro': #c3d6cf,
+  'malbec': #b64a4d,
+  'preto': #000000,
+  'verde': #d8e7dc,
+  'verde-marinho': #53af9b,
+  'marinho-verde': #314e5e,
+  'azul-claro': #c3cad9,
+  'vinho': #99191d,
+  'rose': #cc9194,
+  'rosa': #e8d3d4,
+  'perola': #fffff5,
+  'grafite': #96989a,
+  'cinza': #d2d3d5,
+  'caqui': #cfcbc3,
+  'branco': #fefefe,
+  'marinho': #314e5e,
+  'off-white': #eeebe4,
+  'chumbo': #6c6763,
+  'lavanda': $cor-lavanda,
+  'lilas': $cor-lavanda,
+  'lavandaprovence': $cor-lavanda,
+  'alecrim': #b8d6b8,
+  'dourado': #deb438,
+  'verde-eucaliptus': #4b6e6d,
+  'azul-tirreno': #52658c,
+  'fendi': #abc2b3,
+  'maca-com-canela': #bd3437,
+  'capim-limao': #d2e28b,
+  'rosa-magno': #dc8a7c,
+  'vermelho': #ed3237,
+  'amarelo': #fff11f,
+);
+
+@mixin sku-colors {
+  @each $key, $value in $colors {
+    &--#{$key} {
+      @if $key== 'branco' or $key== 'perola' {
+        border: 1px solid #b6b6b6;
+      }
+
+      .valueWrapper {
+        &::before {
+          background: $value;
+        }
+      }
+    }
+  }
+
+  &--azul-e-rosa {
+    .valueWrapper {
+      &::before {
+        background: map.get($colors, 'azul');
+      }
+
+      &::after {
+        top: 0;
+        left: 0;
+        content: '';
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        background: map.get($colors, 'rosa');
+        border-radius: inherit;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+  }
+  &--branco-azul-marinho,
+  &--branco-marinho {
+    .valueWrapper {
+      &::before {
+        background: map.get($colors, 'marinho');
+      }
+
+      &::after {
+        top: 0;
+        left: 0;
+        content: '';
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        background: map.get($colors, 'branco');
+        border-radius: inherit;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+  }
+  &--verde-marinho {
+    .valueWrapper {
+      &::before {
+        background: map.get($colors, 'marinho-verde');
+      }
+
+      &::after {
+        top: 0;
+        left: 0;
+        content: '';
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        background: map.get($colors, 'verde-marinho');
+        border-radius: inherit;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+  }
+
+  &--branco-cinza {
+    border: 1px solid #b6b6b6 !important;
+
+    .valueWrapper {
+      &::before {
+        background: map.get($colors, 'cinza');
+      }
+
+      &::after {
+        top: 0;
+        left: 0;
+        content: '';
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        background: map.get($colors, 'branco');
+        border-radius: inherit;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+  }
+
+  &--cinza-e-marinho {
+    .valueWrapper {
+      &::before {
+        background: url(assets/images/cinza-e-marinho.png) no-repeat center;
+      }
+    }
+  }
+}
+
+@mixin color-shelf {
+  @each $key, $value in $colors {
+    &--#{$key} {
+      background: $value;
+    }
+  }
+
+  &--azul-e-rosa {
+    background: map.get($colors, 'azul');
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      background: map.get($colors, 'rosa');
+      border-radius: inherit;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  &--branco-azul-marinho,
+  &--branco-marinho {
+    background: map.get($colors, 'marinho');
+    border: 1px solid #b6b6b6 !important;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      background: map.get($colors, 'branco');
+      border-radius: inherit;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  &--branco-cinza {
+    border: 1px solid #b6b6b6 !important;
+    background: map.get($colors, 'cinza');
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      background: map.get($colors, 'branco');
+      border-radius: inherit;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  &--cinza-e-marinho {
+    background: url(assets/images/cinza-e-marinho.png) no-repeat center;
+  }
+}
+
+@mixin color-category-filter {
+  @each $key, $value in $colors {
+    &--#{$key} {
+      :global(.vtex-checkbox__inner-container) {
+        background: $value;
+      }
+
+      @if $key== 'branco' or $key== 'perola' {
+        :global(.vtex-checkbox__inner-container) {
+          border: 1px solid #9c9c9c !important;
+        }
+      }
+    }
+  }
+
+  &--azul-e-rosa {
+    :global(.vtex-checkbox__inner-container) {
+      background: map.get($colors, 'azul');
+      border: 1px solid #b6b6b6 !important;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        background: map.get($colors, 'rosa');
+        border-radius: inherit;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+  }
+  &--branco---azul-marinho,
+  &--branco--marinho {
+    :global(.vtex-checkbox__inner-container) {
+      background: map.get($colors, 'marinho');
+      border: 1px solid #b6b6b6 !important;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        background: map.get($colors, 'branco');
+        border-radius: inherit;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+  }
+  &--verde---marinho {
+    :global(.vtex-checkbox__inner-container) {
+      background: map.get($colors, 'marinho-verde');
+      border: 1px solid #b6b6b6 !important;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        background: map.get($colors, 'verde-marinho');
+        border-radius: inherit;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+  }
+
+  &--branco---cinza {
+    :global(.vtex-checkbox__inner-container) {
+      background: map.get($colors, 'cinza');
+      border: 1px solid #b6b6b6 !important;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        background: map.get($colors, 'branco');
+        border-radius: inherit;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+  }
+
+  &--cinza-e-marinho {
+    :global(.vtex-checkbox__inner-container) {
+      background: url(assets/images/cinza-e-marinho.png) no-repeat center;
+    }
+  }
+}

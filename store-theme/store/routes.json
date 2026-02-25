@@ -1,0 +1,11 @@
+{
+  "store.custom#about-us": {
+    "path": "/institucional/sobre-nos"
+  },
+  "store.custom#our-stores": {
+    "path": "/institucional/nossas-lojas"
+  },
+  "store.custom#contact-us": {
+    "path": "/institucional/fale-conosco"
+  }
+}

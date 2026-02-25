@@ -1,0 +1,60 @@
+import React, { useEffect, useRef, useState } from 'react';
+
+const BackToTopButton: React.FC = () => {
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setVisible(window.scrollY > 200); // botão aparece após 200px
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const handleClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  return (
+    <button
+      ref={buttonRef}
+      onClick={handleClick}
+      className="back-to-top-button"
+      style={{
+        position: 'fixed',
+        bottom: '30px',
+        right: '30px',
+        padding: '0',
+        borderRadius: '50%',
+        border: 'none',
+        backgroundColor: '#CECCC3',
+        color: '#000',
+        cursor: 'pointer',
+        display: visible ? 'block' : 'none',
+        zIndex: 9999,
+        fontWeight: 'bold',
+        width: '38px',
+        height: '38px',
+        fontSize: '28px',
+      }}
+    >
+      <svg
+        width="15"
+        height="17"
+        viewBox="0 0 15 17"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M13.8496 6.72662L7.07616 0.0217285L0.302745 6.72662C0.222829 6.78717 0.156921 6.86411 0.109483 6.95221C0.0620456 7.04031 0.034186 7.13753 0.0277901 7.23728C0.0213941 7.33702 0.0366116 7.43697 0.0724117 7.53036C0.108212 7.62375 0.163759 7.70839 0.235293 7.77856C0.306827 7.84873 0.392677 7.90278 0.487032 7.93707C0.581387 7.97135 0.682043 7.98507 0.782187 7.97728C0.882331 7.96949 0.979624 7.94038 1.06748 7.89193C1.15534 7.84347 1.2317 7.7768 1.29141 7.69642L6.37498 2.67996V16.027C6.37498 16.212 6.44885 16.3895 6.58035 16.5203C6.71185 16.6511 6.8902 16.7247 7.07616 16.7247C7.26213 16.7247 7.44048 16.6511 7.57197 16.5203C7.70347 16.3895 7.77734 16.212 7.77734 16.027V2.67996L12.8609 7.69642C12.9929 7.82688 13.1717 7.8998 13.3577 7.89914C13.5438 7.89849 13.722 7.82431 13.8531 7.69293C13.9842 7.56155 14.0575 7.38373 14.0568 7.19859C14.0562 7.01344 13.9816 6.83614 13.8496 6.70569V6.72662Z"
+          fill="black"
+        />
+      </svg>
+    </button>
+  );
+};
+
+export default BackToTopButton;

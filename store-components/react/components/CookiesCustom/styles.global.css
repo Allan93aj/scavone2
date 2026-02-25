@@ -1,0 +1,60 @@
+.cc-color-override-1444386161.cc-window {
+  width: 385px;
+  max-width: 385px;
+  /* height: 205px; */
+  border: 1px solid #9f8d79 !important;
+}
+/* .w-50-ns.pr6-ns.mb5.mb0-ns {
+  width: 55vw;
+  border: 3px solid red;
+}
+.w-50-ns.pl6-ns {
+  max-width: 45vw;
+  margin-left: 60px;
+} */
+a.cc-btn.cc-ALLOW {
+  background: #9f8d79;
+  border-radius: 1.4px;
+}
+a.cc-btn.cc-ALLOW:hover {
+  background: #9f8d79;
+}
+a.cc-btn {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0.65px;
+  font-size: 12px;
+}
+.cc-window.cc-floating {
+  max-width: 385px;
+}
+
+#cookieconsent\:desc.cc-message > span.cc-message {
+  position: relative;
+  font-size: 0;
+  display: inline-block;
+  visibility: hidden;
+  font-family: 'Montserrat';
+  font-weight: 500;
+  line-height: 19px;
+}
+
+#cookieconsent\:desc.cc-message > span.cc-message::before {
+  content: "Usamos cookies para melhorar sua experiência e nossos serviços. Ao clicar em 'Aceitar', você concorda com isso.";
+  visibility: visible;
+  position: relative;
+  font-size: 14px;
+  color: inherit;
+}
+
+#cookieconsent\:desc.cc-message > span.cc-message a {
+  visibility: visible;
+  font-size: 14px;
+  position: relative;
+  z-index: 1;
+  color: #1072a3;
+}
+.render-provider > [class*="loadingBarAnimation"] > div::after{
+  background-image:url("https://scavone.vtexassets.com/assets/vtex.file-manager-graphql/images/b51173c7-8727-4ebf-ae76-93b178d40d84___827eadf806d2c20c4b5e677c7e8ee7cf.gif") !important
+}

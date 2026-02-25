@@ -1,0 +1,59 @@
+.cartListContainer {
+    padding: 0 9px;
+}
+
+.customProductImageContainer {
+    width: 96px !important;
+}
+
+.cartListContainer {
+    overflow-y: scroll !important;
+}
+
+/* Seção de Personalizações */
+.customizationSection {
+    padding: 12px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    margin-top: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.customizationHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.customizationHeaderText {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.customizationToggleIcon {
+    transition: transform 0.3s ease;
+}
+
+.customizationContent {
+    overflow: hidden;
+    transition: max-height 0.3s ease, margin-top 0.3s ease;
+}
+
+.customizationItem {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+.customizationLabel {
+    color: #666;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.customizationValue {
+    font-weight: 600;
+    font-size: 12px;
+    color: #333;
+}

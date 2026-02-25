@@ -1,0 +1,89 @@
+{
+  "product-summary.shelf#pdp": {
+    "children": [
+      "scavone-product-image",
+      "flex-layout.row#container-name-pdp",
+      "flex-layout.row#container-button-and-price-pdp"
+    ]
+  },
+  "product-summary.shelf#mobile-pdp": {
+    "children": [
+      "scavone-product-image",
+      "flex-layout.row#container-name-pdp",
+      "flex-layout.row#container-button-and-price-pdp"
+    ]
+  },
+  "product-summary.shelf#mobile-pdp-complete-collection": {
+    "children": [
+      "scavone-product-image",
+      "flex-layout.row#container-name-pdp",
+      "flex-layout.row#mobile-container-button-and-price-pdp"
+    ]
+  },
+  "flex-layout.row#container-name-pdp": {
+    "children": ["product-summary-name#shelf-complete-collection"],
+    "props": {
+      "blockClass": "container-name-and-price-pdp"
+    }
+  },
+  "flex-layout.row#container-button-and-price-pdp": {
+    "children": [
+      "scavone-product-price-condition-layout#shelf",
+      "product-summary-buy-button#shelf-pdp"
+    ],
+    "props": {
+      "blockClass": "container-button-and-price-pdp"
+    }
+  },
+  "flex-layout.row#mobile-container-button-and-price-pdp": {
+    "children": [
+      "flex-layout.row#price-and-installments",
+      "sku-selector",
+      "flex-layout.row#mobile-shelf-pdp-quantity",
+      "product-summary-buy-button#mobile-shelf-pdp"
+    ],
+    "props": {
+      "blockClass": "container-button-and-price-pdp"
+    }
+  },
+  "sku-selector": {
+    "props": {
+      "blockClass": "teste",
+      "sortVariationsByLabel": true
+    }
+  },
+  "flex-layout.row#mobile-price-and-installments": {
+    "children": ["responsive-layout.mobile#pdp-shelf", "product-installments"],
+    "props": {
+      // "blockClass": "quantity-mobile",
+    }
+  },
+
+  "flex-layout.row#mobile-shelf-pdp-quantity": {
+    "children": ["product-quantity#mobile-shelf-pdp-quantity"],
+    "props": {
+      "blockClass": "quantity-mobile",
+      "colJustify": "around"
+    }
+  },
+  "product-quantity#mobile-shelf-pdp-quantity": {
+    "props": {
+      "showLabel": false,
+      "blockClass": "pdp-quantity"
+    }
+  },
+  "product-summary-buy-button#mobile-shelf-pdp": {
+    "props": {
+      "buyButtonText": "Adicionar produto",
+      "buyButtonBehavior": "alwaysGoToProduct",
+      "blockClass": ["go-to-product-pdp", "go-to-product-pdp--mobile"]
+    }
+  },
+  "product-summary-buy-button#shelf-pdp": {
+    "props": {
+      "buyButtonText": "Comprar",
+      "buyButtonBehavior": "alwaysGoToProduct",
+      "blockClass": ["go-to-product-pdp", "go-to-product-pdp--desktop"]
+    }
+  }
+}

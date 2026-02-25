@@ -1,0 +1,36 @@
+{
+  "search-not-found-layout": {
+    "children": [
+      "rich-text#empty-search-title",
+      "rich-text#empty-search-subtitle",
+      "rich-text#empty-search-items",
+      "rich-text#empty-search-shelf-title"
+      // "list-context.product-list#shelf-product"
+    ]
+  },
+
+  "rich-text#empty-search-title": {
+    "props": {
+      "blockClass": ["empty-search-title"],
+      "text": "Ops... sua busca **não foi encontrada!**"
+    }
+  },
+  "rich-text#empty-search-subtitle": {
+    "props": {
+      "blockClass": ["empty-search-subtitle"],
+      "text": "Infelizmente não encontramos nenhum resultado para essa busca"
+    }
+  },
+  "rich-text#empty-search-items": {
+    "props": {
+      "blockClass": ["empty-search-items"],
+      "text": "Verifique se a palavra foi digitada corretamente;\n\nTente palavras menos específicas;\n\nTente palavras-chave diferentes;\n\nFaça buscas relacionadas."
+    }
+  },
+  "rich-text#empty-search-shelf-title": {
+    "props": {
+      "blockClass": ["empty-search-shelf-title"],
+      "text": "Você também pode gostar"
+    }
+  }
+}

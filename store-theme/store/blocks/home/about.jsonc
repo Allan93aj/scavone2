@@ -1,0 +1,62 @@
+{
+  "flex-layout.row#home-sobre": {
+    "title": "Sobre a Scavone",
+    "children": [
+      // "scavone-imagem#home-sobre",
+      "flex-layout.col#home-sobre"
+    ],
+    "props": {
+      "fullWidth": true,
+      "preventHorizontalStretch": true,
+      "blockClass": "home-sobre"
+    }
+  },
+  "flex-layout.col#home-sobre": {
+    "title": "Conteúdo",
+    "children": [
+      "rich-text#home-sobre",
+      // "rich-text#home-sobre-saying",
+      "link#home-sobre-button"
+    ],
+    "props": {
+      "horizontalAlign": "center",
+      "verticalAlign": "top",
+      "blockClass": "home-sobre"
+    }
+  },
+  "rich-text#home-sobre": {
+    "props": {
+      "text": "# Bem-vindo a nossa Casa! \n\n Desde 1893 produzindo com qualidade! Aqui você encontra uma linha completa de produtos para sua Cama e seu Banho \n Jogos de lençol, colchas, edredons, duvets, cobertores e fronhas, tudo em 100% algodão - fio penteado.",
+      "blockClass": "home-sobre"
+    }
+  },
+  "rich-text#home-sobre-saying": {
+    "title": "Ditado",
+    "props": {
+      "text": "Não importa o ambiente, a **Scavone** entende seu estilo.",
+      "blockClass": "home-sobre-ditado",
+      "textAlignment": "center",
+      "textPosition": "center"
+    }
+  },
+  "link#home-sobre-button": {
+    "props": {
+      "label": "Descubra!",
+      "href": "",
+      "blockClass": "home-sobre"
+    }
+  },
+  "scavone-imagem#home-sobre": {
+    "title": "banner",
+    "props": {
+      "blockClass": "home-sobre",
+      "src": "https://via.placeholder.com/770x502",
+      "srcMobile": "https://via.placeholder.com/335x338",
+      "width": 770,
+      "widthMobile": 335,
+      "height": 502,
+      "alt": "",
+      "heightMobile": 338
+    }
+  }
+}

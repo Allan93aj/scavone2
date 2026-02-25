@@ -1,0 +1,46 @@
+{
+  "cross-selling-provider": {
+    "component": "CrossSellingProvider",
+    "composition": "children"
+  },
+  "cross-selling-price": {
+    "component": "CrossSellingPrice"
+  },
+  "cross-product-list": {
+    "component": "CrossProductList",
+    "allowed": [
+      "cross-product-summary"
+    ]
+  },
+  // "cross-product-slider": {
+  //   "component": "CrossProductSlider",
+  //   "allowed": [
+  //     "cross-product-summary"
+  //   ]
+  // },
+  "cross-product-summary": {
+    "component": "CrossProductSummary",
+    "composition": "children"
+  },
+  "cross-product-checkbox": {
+    "component": "CrossProductCheckbox"
+  },
+  "cross-add-to-cart-button": {
+    "component": "CrossAddToCartButton"
+  },
+  "cross-product-sku-selector": {
+    "component": "CrossProductSkuSelector"
+  },
+  "cross-selling-items-quantity": {
+    "component": "CrossSellingItemsQuantity"
+  },
+  "cross-selling-installments": {
+    "component": "CrossSellingInstallments"
+  },
+  "cross-product-refresh-button": {
+    "component": "CrossProductRefreshButton"
+  },
+  "main-product-layout": {
+    "component": "MainProductLayout"
+  }
+}

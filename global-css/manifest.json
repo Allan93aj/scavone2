@@ -1,0 +1,32 @@
+{
+  "vendor": "scavone",
+  "name": "global-css",
+  "version": "0.0.2",
+  "title": "Scavone Global CSS",
+  "builders": {
+    "react": "3.x",
+    "store": "0.x",
+    "docs": "0.x"
+  },
+  "scripts": {
+    "postreleasy": "vtex publish --verbose"
+  },
+  "dependencies": {
+    "vtex.render-runtime": "8.x",
+    "vtex.apps-graphql": "3.x"
+  },
+  "settingsSchema": {
+    "access": "public",
+    "title": "Scavone Global CSS",
+    "type": "object",
+    "properties": {
+      "htmlContent": {
+        "title": "HTML Content",
+        "description": "Adicione seu código CSS aqui.",
+        "type": "string",
+        "default": "<p>Insira seu conteúdo aqui</p>"
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

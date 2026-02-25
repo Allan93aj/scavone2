@@ -1,0 +1,12 @@
+.link-button {
+  display: block;
+  color: #373435;
+  text-align: left;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 14px;
+  text-decoration-line: underline;
+  margin-top: 24px;
+}

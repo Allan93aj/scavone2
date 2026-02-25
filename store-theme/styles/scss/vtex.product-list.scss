@@ -1,0 +1,87 @@
+@use './config/variables' as *;
+
+.productImage {
+  max-width: 86px;
+}
+
+.productVariationsContainer {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+}
+
+.productName,
+.productVariationsItem {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: $c-main-black-dark;
+}
+
+.removeButtonContainer {
+  margin-right: 8px;
+
+  .removeButton {
+    padding: 0;
+
+    @supports (-webkit-touch-callout: none) {
+      width: 30px;
+    }
+
+    .deleteIcon {
+      overflow: visible;
+    }
+  }
+}
+
+.quantitySelectorContainer {
+  border: 1px solid $c-main-green;
+  border-radius: $border-radius-pattern;
+  background: $c-main-white;
+
+  &--pdp-quantity {
+    background-color: red;
+
+    @include mobile {
+      width: 30%;
+    }
+  }
+
+  @include mobile {
+    width: auto;
+  }
+
+  .quantitySelectorButton {
+    padding: 0;
+    color: $c-main-black-light;
+    border: none;
+    background: transparent;
+  }
+
+  .quantitySelectorDecrease {
+    padding: 10px 0 10px 10px;
+  }
+
+  .quantitySelectorIncrease {
+    padding: 10px 10px 10px 0;
+  }
+
+  .inputContainer {
+    padding: 0;
+    border: none;
+    width: 56px;
+  }
+}
+
+.productPriceContainer {
+  width: auto;
+  margin-right: 4px;
+
+  .price {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 14px;
+    color: $c-main-black;
+    width: auto;
+  }
+}

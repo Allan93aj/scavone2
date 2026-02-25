@@ -1,0 +1,29 @@
+{
+  "disclosure-layout#disclosure-description": {
+    "children": [
+      "disclosure-trigger#open-description",
+      "disclosure-content#content-description"
+    ],
+    "props": {
+      "blockClass": ["disclosure-pdp"]
+    }
+  },
+  "disclosure-trigger#open-description": {
+    "children": ["rich-text#trigger-disclosure-mobile-description"],
+    "props": {
+      "blockClass": ["disclosure-pdp"]
+    }
+  },
+  "rich-text#trigger-disclosure-mobile-description": {
+    "props": {
+      "text": "DESCRIÇÃO"
+    },
+    "title": "Título - Descrição"
+  },
+  "disclosure-content#content-description": {
+    "children": ["scavone-product-description-simpler"],
+    "props": {
+      "blockClass": ["disclosure-pdp"]
+    }
+  }
+}

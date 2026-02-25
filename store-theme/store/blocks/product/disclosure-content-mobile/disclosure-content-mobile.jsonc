@@ -1,0 +1,24 @@
+{
+  "responsive-layout.mobile#disclosure-content": {
+    "children": ["flex-layout.row#disclosure-content-pdp"]
+  },
+
+  "flex-layout.row#disclosure-content-pdp": {
+    "children": ["flex-layout.col#col-disclosure"],
+    "props": {
+      "blockClass": ["disclosure-content-pdp"]
+    },
+    "title": "Disclosures PDP Mobile"
+  },
+
+  "flex-layout.col#col-disclosure": {
+    "children": [
+      "disclosure-layout#disclosure-description",
+      "disclosure-layout#disclosure-medidas",
+      "disclosure-layout#disclosure-instruction"
+    ],
+    "props": {
+      "blockClass": ["col-disclosure"]
+    }
+  }
+}

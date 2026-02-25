@@ -1,0 +1,95 @@
+{
+  "store.custom#institutional": {
+    "children": [
+      "flex-layout.row#institutional-container",
+      "rich-text#shelf-institucional-title",
+      "list-context.product-list#shelf-institucional"
+    ]
+  },
+  "flex-layout.row#institutional-container": {
+    "children": ["flex-layout.col#institutional-content"],
+    "props": {
+      "blockClass": "institutional-container"
+    }
+  },
+  "flex-layout.col#institutional-content": {
+    "children": [
+      "rich-text#institucional-breadcrumb",
+      "flex-layout.row#institutional-content"
+    ],
+    "props": {
+      "blockClass": "institutional-content"
+    }
+  },
+  "rich-text#shelf-institucional-title": {
+    "title": "Titulo - Vitrine Institucional - Os favoritos perto de você ",
+    "props": {
+      "text": "OS FAVORITOS PERTO DE VOCÊ",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": ["institucional-title", "institucional-shelf"]
+    }
+  },
+  "flex-layout.row#institutional-content": {
+    "children": [
+      "flex-layout.col#institutional-menu",
+      "flex-layout.col#institutional-text"
+    ],
+    "props": {
+      "fullWidth": true,
+      "colSizing": "auto",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "blockClass": "institutional-content"
+    }
+  },
+  "list-context.product-list#shelf-institucional": {
+    "blocks": ["product-summary.shelf#institucional"],
+    "children": ["slider-layout#shelf"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "maxItems": 8
+    }
+  },
+  "product-summary.shelf#institucional": {
+    "children": [
+      "add-to-list-btn#shelf",
+      "scavone-product-image",
+      "product-summary-name",
+      "flex-layout.row#shelf-price-add-to-cart",
+      "product-price-savings"
+    ]
+  },
+  "flex-layout.col#institutional-text": {
+    "children": [
+      "rich-text#institutional-title",
+      "rich-text#institutional-text",
+      "scavone-institutional-accordion"
+      // "list-context.product-list#shelf-institucional"
+    ],
+    "props": {
+      "blockClass": "institutional-content"
+    }
+  },
+  "flex-layout.col#institutional-menu": {
+    "children": ["scavone-institutional-menu"],
+    "props": {
+      "blockClass": "institutional-menu",
+      "preventVerticalStretch": true
+    }
+  },
+  "rich-text#institutional-title": {
+    "title": "Título",
+    "props": {
+      "text": "## Política de Privacidade",
+      "blockClass": "institutional-title"
+    }
+  },
+  "rich-text#institutional-text": {
+    "title": "Texto",
+    "props": {
+      "text": "Lorem ipsum",
+      "blockClass": "institutional-text"
+    }
+  }
+}

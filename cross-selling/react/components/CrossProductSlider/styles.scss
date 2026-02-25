@@ -1,0 +1,55 @@
+.crossProductSlider{
+  overflow: hidden;
+
+  :global(.slick-slider){
+    position: relative;
+    padding-bottom: 1.875rem;
+
+    :global(.slick-track){
+      display: flex;
+    }
+
+    :global(.slick-dots){
+      display: flex !important;
+      justify-content: center;
+      gap: .5rem;
+      right: 0;
+      bottom: 0;
+
+      li{
+        button{
+          padding: 0;
+          display: flex;
+          align-items: flex-end;
+          width: auto !important;
+
+          &::before{
+            display: none !important;
+            content: '' !important;
+          }
+  
+          &::after{
+            content: '';
+            display: flex;
+            width: 30px;
+            height: 2px;
+            border-radius: 0;
+            padding: 0;
+            transition: .2s;
+            background: #a1a1a1;
+          }
+        }
+      }
+
+      :global(.slick-active){
+        button{
+          padding: 0;
+  
+          &::after{
+            height: .375rem !important;
+          }
+        }
+      }
+    }
+  }
+}

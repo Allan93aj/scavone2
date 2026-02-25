@@ -1,0 +1,10 @@
+@media screen and (max-width: 768px) {
+  .custom-parent-div{
+    display: none;
+  }
+   .banner-image-mobile{
+    width: 100%;
+   }
+}
+
+   

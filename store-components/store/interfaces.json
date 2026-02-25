@@ -1,0 +1,190 @@
+{
+  "scavone-image-list": {
+    "component": "ImageList"
+  },
+  "scavone-category-bullet-list": {
+    "component": "CategoryBulletList"
+  },
+  "scavone-share": {
+    "component": "Share"
+  },
+  "scavone-imagem": {
+    "component": "Imagem"
+  },
+  "scavone-collection-list": {
+    "component": "CollectionCardList"
+  },
+  "scavone-product-description": {
+    "component": "ProductDescription"
+  },
+  "scavone-product-description-simpler": {
+    "component": "DescriptionCustom"
+  },
+  "scavone-product-medidas": {
+    "component": "MedidasCustom"
+  },
+  "scavone-interactive-banner": {
+    "component": "InteractiveBanner",
+    "composition": "children"
+  },
+  "scavone-product-tabs-custom": {
+    "component": "TabsCustom"
+  },
+  "scavone-cookies-custom-styleguide": {
+    "component": "CookiesCustom",
+    "render": "client"
+  },
+  "scavone-product-instruction": {
+    "component": "InstructionAndCare"
+  },
+  "scavone-newsletter": {
+    "component": "Newsletter"
+  },
+  "scavone-measurement-chart": {
+    "component": "MeasurementChart",
+    "composition": "children"
+  },
+  "scavone-mega-menu": {
+    "component": "MegaMenu"
+  },
+  "scavone-account-header-mobile": {
+    "component": "AccountHeaderMobile"
+  },
+  "scavone-gradient-collapse": {
+    "component": "GradientCollapse",
+    "composition": "children"
+  },
+  "scavone-institutional-menu": {
+    "component": "InstitutionalMenu"
+  },
+  "scavone-institutional-accordion": {
+    "component": "AccordionInstitutional"
+  },
+  "scavone-banner": {
+    "component": "Banner"
+  },
+  "scavone-history-slider": {
+    "component": "HistorySlider"
+  },
+  "scavone-stores": {
+    "component": "Stores"
+  },
+  "scavone-cross-selling-provider": {
+    "component": "CrossSellingProvider",
+    "composition": "children"
+  },
+  "scavone-cross-selling-price": {
+    "component": "CrossSellingPrice"
+  },
+  "scavone-cross-product-list": {
+    "component": "CrossProductList",
+    "allowed": [
+      "scavone-cross-product-summary"
+    ]
+  },
+  "scavone-cross-product-summary": {
+    "component": "CrossProductSummary",
+    "composition": "children"
+  },
+  "scavone-cross-product-checkbox": {
+    "component": "CrossProductCheckbox"
+  },
+  "scavone-cross-product-image": {
+    "component": "CrossProductImage"
+  },
+  "scavone-cross-product-name": {
+    "component": "CrossProductName"
+  },
+  "scavone-cross-product-tag": {
+    "component": "CrossProductTag"
+  },
+  "scavone-cross-product-selling-price": {
+    "component": "CrossProductSellingPrice"
+  },
+  "scavone-cross-product-list-price": {
+    "component": "CrossProductListPrice"
+  },
+  "scavone-cross-add-to-cart-button": {
+    "component": "CrossAddToCartButton"
+  },
+  "scavone-cross-product-installments": {
+    "component": "CrossProductInstallments"
+  },
+  "scavone-cross-product-sku-selector": {
+    "component": "CrossProductSkuSelector"
+  },
+  "scavone-cross-selling-items-quantity": {
+    "component": "CrossSellingItemsQuantity"
+  },
+  "scavone-single-product-image": {
+    "component": "SingleProductImage"
+  },
+  "scavone-buy-together-installments": {
+    "component": "BuyTogetherInstallments"
+  },
+  "scavone-contact-us": {
+    "component": "ContactUs"
+  },
+  "scavone-newsletter-modal": {
+    "component": "NewsletterModal"
+  },
+  "scavone-minicart-freight-bar": {
+    "component": "MinicartFreightBar"
+  },
+  "scavone-minicart-coupon": {
+    "component": "MinicartCoupon"
+  },
+  "scavone-zendesk-chat": {
+    "component": "ZendeskChat"
+  },
+  "scavone-one-trust": {
+    "component": "OneTrust"
+  },
+  "scavone-whatsapp-button": {
+    "component": "WhatsappButton"
+  },
+  "scavone-product-image": {
+    "component": "ProductImage"
+  },
+  "scavone-product-price-condition-layout": {
+    "component": "ProductPriceConditionLayout"
+  },
+  "scavone-buy-together-product": {
+    "component": "BuyTogetherProduct"
+  },
+  "scavone-search-console-tag": {
+    "component": "SearchConsoleTag"
+  },
+  "scavone-product-link-v2": {
+    "component": "ProductLink",
+    "composition": "children",
+    "props": {
+      "linkText": {
+        "type": "string",
+        "title": "Texto do Link",
+        "default": "Ver produto"
+      }
+    }
+  },
+  "scavone-js-snippets": {
+    "component": "JavascriptSnippets"
+  },
+  "scavone-spinner-loading": {
+    "component": "SpinnerLoading"
+  },
+  "scavone-btn-backtotop": {
+    "component": "BackToTopButton"
+  },
+  "custom-banner-departament": {
+    "component": "DepartmentBanner"
+  },
+  "custom-banner-departament-mobile": {
+    "component": "DepartmentBannerMobile"
+  },
+  "custom-bordado": {
+    "component": "Bordado"
+  },
+  "custom-minicart": {
+    "component": "MiniCartCustom"
+  }
+}

@@ -1,0 +1,361 @@
+{
+  "store.search": {
+    "blocks": ["search-result-layout"],
+    "props": {
+      "context": {
+        "skusFilter": "ALL",
+        "simulationBehavior": "default",
+        "preventRouteChange": true,
+        "maxItemsPerPage": 12
+      }
+    }
+  },
+  "store.search#brand": {
+    "blocks": ["search-result-layout"],
+    "props": {
+      "context": {
+        "orderByField": "OrderByReleaseDateDESC",
+        "skusFilter": "ALL",
+        "simulationBehavior": "default",
+        "preventRouteChange": true,
+        "maxItemsPerPage": 12
+      }
+    }
+  },
+  "store.search#department": {
+    "blocks": ["search-result-layout"],
+    "props": {
+      "context": {
+        "orderByField": "OrderByReleaseDateDESC",
+        "skusFilter": "ALL",
+        "simulationBehavior": "default",
+        "preventRouteChange": true,
+        "maxItemsPerPage": 12
+      }
+    }
+  },
+  "store.search#category": {
+    "blocks": ["search-result-layout"],
+    "props": {
+      "context": {
+        "orderByField": "OrderByReleaseDateDESC",
+        "skusFilter": "ALL",
+        "simulationBehavior": "default",
+        "preventRouteChange": true,
+        "maxItemsPerPage": 12
+      }
+    }
+  },
+  "store.search#subcategory": {
+    "blocks": ["search-result-layout"],
+    "props": {
+      "context": {
+        "orderByField": "OrderByReleaseDateDESC",
+        "skusFilter": "ALL",
+        "simulationBehavior": "default",
+        "preventRouteChange": true,
+        "maxItemsPerPage": 12
+      }
+    }
+  },
+  "search-result-layout": {
+    "blocks": [
+      "search-result-layout.desktop",
+      "search-result-layout.mobile",
+      "search-not-found-layout"
+    ]
+  },
+  "search-result-layout.desktop": {
+    "title": "Busca Desktop",
+    "children": [
+      "scavone-cookies-custom-styleguide",
+      "breadcrumb.search",
+      "custom-banner-departament", // banner departament
+      "scavone-imagem#search-banner",
+      "flex-layout.row#search-result",
+      "flex-layout.row#search-fetch-more",
+      "scavone-gradient-collapse#seo-text"
+    ],
+    "props": {
+      "pagination": "infinite",
+      "preventRouteChange": true
+    }
+  },
+  "search-result-layout.mobile": {
+    "title": "Busca Mobile",
+    "children": [
+      "breadcrumb.search",
+      "custom-banner-departament-mobile", // Banner Departament
+      "scavone-imagem#search-banner",
+      "flex-layout.row#search-result-mobile",
+      "flex-layout.row#search-fetch-more",
+      "scavone-gradient-collapse#seo-text"
+    ],
+    "props": {
+      "pagination": "infinite",
+      "preventRouteChange": true
+    }
+  },
+  "scavone-imagem#search-banner": {
+    "props": {
+      "src": "https://via.placeholder.com/1299x230",
+      "srcMobile": "https://via.placeholder.com/375x140",
+      "height": 230,
+      "width": 1299,
+      "widthMobile": 375,
+      "heightMobile": 140,
+      "alt": "",
+      "blockClass": ["search-banner"]
+    }
+  },
+  "breadcrumb.search": {
+    "props": {
+      "homeIconSize": 0,
+      "caretIconSize": 12,
+      "blockClass": "search",
+      "showOnMobile": true
+    }
+  },
+  "flex-layout.row#search-result": {
+    "children": ["flex-layout.col#search-content"],
+    "props": {
+      "fullWidth": true,
+      "preventHorizontalStretch": true,
+      "blockClass": ["search-result"]
+    }
+  },
+  "flex-layout.row#search-result-mobile": {
+    "children": ["flex-layout.col#search-content-mobile"],
+    "props": {
+      "fullWidth": true,
+      "preventHorizontalStretch": true,
+      "blockClass": ["search-result"]
+    }
+  },
+  "filter-navigator.v3#mobile": {
+    "blocks": ["sidebar-close-button"],
+    "props": {
+      "scrollToTop": "smooth",
+      "initiallyCollapsed": true,
+      "fullWidthOnMobile": true,
+      "navigationTypeOnMobile": "collapsible",
+      "updateOnFilterSelectionOnMobile": true
+    }
+  },
+  "flex-layout.row#search-options": {
+    "children": [
+      "search-products-count-per-page",
+      "order-by.v2",
+      "flex-layout.row#gallery-switcher"
+    ],
+    "props": {
+      "blockClass": ["search-options"],
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true
+    }
+  },
+  "flex-layout.row#search-options-mobile": {
+    "children": [
+      "filter-navigator.v3#mobile",
+      "order-by.v2",
+      "gallery-layout-switcher#-mobile"
+    ],
+    "props": {
+      "blockClass": ["search-options"],
+      "preventVerticalStretch": true
+    }
+  },
+  "flex-layout.row#gallery-switcher": {
+    "children": [
+      // "rich-text#title-grid",
+      "gallery-layout-switcher"
+    ],
+    "props": {
+      "blockClass": ["gallery-switcher"],
+      "preventHorizontalStretch": false,
+      "preventVerticalStretch": false
+    }
+  },
+  "flex-layout.col#search-content": {
+    "children": [
+      "flex-layout.row#title-text-filter",
+      "flex-layout.col#search-options",
+      "search-content"
+    ],
+    "props": {
+      "width": "grow",
+      "preventVerticalStretch": true,
+      "blockClass": "search-content"
+    }
+  },
+  "flex-layout.col#search-options": {
+    "children": [
+      "filter-navigator.v3#desktop",
+      "flex-layout.row#gallery-switcher",
+      "order-by.v2"
+    ],
+    "props": {
+      "blockClass": ["search-options", "filter-pdc"],
+      "preventVerticalStretch": true,
+      "verticalAlign": "middle"
+    }
+  },
+  "flex-layout.col#row-filter": {
+    "children": ["filter-navigator.v3#desktop"],
+    "props": {
+      "width": "40%",
+      "blockClass": "row-filter-v3"
+    }
+  },
+  "filter-navigator.v3#desktop": {
+    "props": {
+      "width": "100%",
+      "openFiltersMode": "one",
+      "initiallyCollapsed": true, //habilita se o componente vem aberto ou fechado
+      "truncateFilters": true //Determina se um seletor de filtro com mais de 10 opções de filtro encurta a lista e exibe
+    }
+  },
+  "flex-layout.row#title-text-filter": {
+    "children": ["rich-text#title-text-filter"],
+    "props": {
+      "blockClass": "title-text-filter"
+    }
+  },
+  "rich-text#title-text-filter": {
+    "props": {
+      "text": "Filtros",
+      "textColor": "c-auto"
+    }
+  },
+  "flex-layout.col#search-content-mobile": {
+    "children": ["flex-layout.row#search-options-mobile", "search-content"],
+    "props": {
+      "width": "grow",
+      "preventVerticalStretch": true,
+      "blockClass": "search-content"
+    }
+  },
+  "flex-layout.row#search-fetch-more": {
+    "children": ["search-fetch-more"],
+    "props": {
+      "blockClass": ["search-fetch-more"]
+    }
+  },
+  "search-content": {
+    "blocks": ["gallery", "not-found"]
+  },
+  "gallery": {
+    "props": {
+      "layouts": [
+        {
+          "name": "grid",
+          "component": "GridSummary",
+          "itemsPerRow": {
+            "desktop": 4,
+            "tablet": 3,
+            "phone": 2
+          }
+        },
+        {
+          "name": "list",
+          "component": "ListSummary",
+          "itemsPerRow": {
+            "desktop": 3,
+            "tablet": 3,
+            "phone": 1
+          }
+        }
+      ],
+      "ListSummary": "product-summary.shelf",
+      "GridSummary": "product-summary.shelf"
+    }
+  },
+  "gallery-layout-switcher": {
+    "children": ["gallery-layout-option#grid", "gallery-layout-option#list"]
+  },
+  "gallery-layout-option#grid": {
+    "props": {
+      "name": "grid"
+    },
+    "children": ["image#grid-icon"]
+  },
+  "gallery-layout-option#list": {
+    "props": {
+      "name": "list"
+    },
+    "children": ["image#list-icon"]
+  },
+  "rich-text#title-grid": {
+    "props": {
+      "text": "Visualização",
+      "textColor": "c-auto",
+      "blockClass": "e-title-grid"
+    }
+  },
+  "image#grid-icon": {
+    "props": {
+      "src": "assets/svg/align-four-columns.svg", ///
+      "width": 19,
+      "height": 14
+    }
+  },
+  "image#list-icon": {
+    "props": {
+      "src": "assets/svg/align-tree-columns.svg",
+      "width": 14,
+      "height": 14
+    }
+  },
+  "gallery-layout-switcher#-mobile": {
+    "children": [
+      "gallery-layout-option#grid-mobile",
+      "gallery-layout-option#list-mobile"
+    ]
+  },
+  "gallery-layout-option#grid-mobile": {
+    "props": {
+      "name": "grid"
+    },
+    "children": ["image#grid-icon-mobile"]
+  },
+  "gallery-layout-option#list-mobile": {
+    "props": {
+      "name": "list"
+    },
+    "children": ["image#list-icon-mobile"]
+  },
+  "image#grid-icon-mobile": {
+    "props": {
+      "src": "assets/svg/align-four-columns.svg",
+      "width": 19,
+      "height": 14
+    }
+  },
+  "image#list-icon-mobile": {
+    "props": {
+      "src": "assets/svg/align-tree-columns.svg",
+      "width": 14,
+      "height": 14
+    }
+  },
+  "scavone-gradient-collapse#seo-text": {
+    "children": ["rich-text#seo-text-title", "rich-text#seo-text-content"],
+    "props": {
+      "collapseHeight": 400
+    }
+  },
+  "rich-text#seo-text-title": {
+    "title": "Título",
+    "props": {
+      "blockClass": ["seo-text-title"],
+      "text": "# Roupa de Cama"
+    }
+  },
+  "rich-text#seo-text-content": {
+    "title": "Texto",
+    "props": {
+      "blockClass": ["seo-text-content"],
+      "text": "Lorem ipsum dolor sit amet."
+    }
+  }
+}

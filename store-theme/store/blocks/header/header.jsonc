@@ -1,0 +1,265 @@
+{
+  "header.full": {
+    "title": "Header",
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+  "header-layout.desktop": {
+    "title": "Desktop",
+    "children": [
+      // "scavone-cookies-custom-styleguide",
+      // "scavone-spinner-loading",
+      "scavone-search-console-tag",
+      "scavone-btn-backtotop",
+      "flex-layout.row#free-shipping-bar",
+      "sticky-layout#header-desktop",
+      "scavone-add-tags",
+      "scavone-js-snippets"
+      // "scavone-zendesk-chat",
+      // "scavone-whatsapp-button"
+    ]
+  },
+  "header-layout.mobile": {
+    "title": "Mobile",
+    "children": [
+      // "scavone-spinner-loading",
+      "scavone-search-console-tag",
+      "scavone-btn-backtotop",
+      "flex-layout.row#free-shipping-bar",
+      "sticky-layout#header-mobile",
+      "scavone-add-tags",
+      "scavone-js-snippets"
+      // "scavone-zendesk-chat",
+      // "scavone-whatsapp-button"
+    ]
+  },
+  "flex-layout.row#free-shipping-bar": {
+    "children": [
+      "responsive-layout.desktop#storekeeper",
+      "slider-layout#free-shipping-carousel",
+      "flex-layout.col#empty-space"
+    ],
+    "props": {
+      "blockClass": ["free-shipping-bar"],
+      "experimentalHideEmptyCols": true
+    }
+  },
+  "responsive-layout.desktop#storekeeper": {
+    "children": ["link#storekeeper"]
+  },
+  "link#storekeeper": {
+    "props": {
+      "label": "Sou lojista",
+      "href": "/",
+      "blockClass": ["storekeeper"]
+    }
+  },
+  "slider-layout#free-shipping-carousel": {
+    "props": {
+      "label": "Slider Pre Header",
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "always",
+      "showPaginationDots": "never",
+      "usePagination": true,
+      "blockClass": "free-shipping-slider",
+      "autoplay": {
+        "timeout": 5000,
+        "stopOnHover": true
+      }
+    },
+    "children": [
+      "rich-text#free-shipping-1",
+      "rich-text#free-shipping-2",
+      "rich-text#free-shipping-3"
+    ]
+  },
+  "rich-text#free-shipping-1": {
+    "props": {
+      "blockClass": ["free-shipping"],
+      "font": "t-body",
+      "text": "**Frete Grátis** para compras acima de **R$ 700,00**"
+    }
+  },
+  "rich-text#free-shipping-2": {
+    "props": {
+      "blockClass": ["free-shipping"],
+      "font": "t-body",
+      "text": "Mensagem 2: **Desconto de 10%** em compras acima de **R$ 500,00**"
+    }
+  },
+  "rich-text#free-shipping-3": {
+    "props": {
+      "blockClass": ["free-shipping"],
+      "font": "t-body",
+      "text": "Mensagem 3: **Novidades exclusivas** todas as semanas!"
+    }
+  },
+  "flex-layout.col#empty-space": {
+    "props": {
+      "blockClass": ["empty-space"]
+    }
+  },
+  "sticky-layout#header-desktop": {
+    "props": {
+      "blockClass": ["header", "header-desktop"]
+    },
+    "children": ["flex-layout.row#header-content-desktop"]
+  },
+  "flex-layout.row#header-content-desktop": {
+    "props": {
+      "horizontalAlign": "between",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true,
+      "blockClass": ["header-content", "header-content-desktop"]
+    },
+    "children": [
+      "logo",
+      "scavone-mega-menu",
+      "flex-layout.row#header-actions-desktop"
+    ]
+  },
+  "logo": {
+    "props": {
+      "title": "scavone",
+      "href": "/",
+      "url": "assets/svg/logo.svg",
+      "width": 130,
+      "height": 92,
+      "mobileWidth": 99,
+      "mobileHeight": 47
+    }
+  },
+  "login": {
+    "props": {
+      "showIconProfile": true,
+      "hideIconLabel": true
+    }
+  },
+  "autocomplete-result-list.v2": {
+    "blocks": ["product-summary.shelf#autocomplete"]
+  },
+  "search-bar": {
+    "blocks": ["autocomplete-result-list.v2"],
+    "props": {
+      "placeholder": "Buscar por:",
+      "displayMode": "search-button",
+      "openAutocompleteOnFocus": true,
+      "productLayout": "VERTICAL",
+      "maxSuggestedTerms": 5,
+      "maxSuggestedProducts": 4
+    }
+  },
+  "flex-layout.row#header-actions-desktop": {
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": ["header-actions", "header-actions-desktop"]
+    },
+    "children": ["search-bar", "image#header-wishlist", "login", "minicart.v2"]
+  },
+  "image#header-wishlist": {
+    "props": {
+      "src": "assets/svg/header-wishlist-icon.svg",
+      "link": {
+        "url": "/account#/wishlist"
+      },
+      "blockClass": ["header-wishlist-icon"],
+      "width": 25,
+      "height": 25
+    }
+  },
+  "sticky-layout#header-mobile": {
+    "props": {
+      "blockClass": ["header", "header-mobile"]
+    },
+    "children": [
+      "flex-layout.row#header-mobile",
+      "flex-layout.row#header-mobile-sticky",
+      "search-bar"
+    ]
+  },
+  "flex-layout.row#header-mobile-sticky": {
+    "children": ["drawer", "image#logo-header-sticky", "minicart.v2"],
+    "props": {
+      "blockClass": ["header-mobile-sticky"],
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+  "image#logo-header-sticky": {
+    "title": "Logo header sticky",
+    "props": {
+      "blockClass": "mobile-logo-sticky",
+      "width": 50,
+      "src": "/",
+      "link": {
+        "url": "/"
+      }
+    }
+  },
+  "flex-layout.row#header-mobile": {
+    "children": ["drawer", "logo", "minicart.v2"],
+    "props": {
+      "blockClass": ["header-mobile"],
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+  "drawer": {
+    "children": [
+      "flex-layout.row#drawer-first-row",
+      "scavone-mega-menu",
+      "flex-layout.row#header-mobile-links"
+    ],
+    "props": {
+      "maxWidth": 355,
+      "isFullWidth": true,
+      "customPixelEventName": "addToCart"
+    }
+  },
+  "flex-layout.row#drawer-first-row": {
+    "title": "Header Menu Mobile",
+    "props": {
+      "blockClass": "drawer-first-row",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true
+    },
+    "children": ["image#user-icon", "scavone-account-header-mobile"]
+  },
+  "image#user-icon": {
+    "props": {
+      "src": "assets/svg/header-mobile-user-icon.svg",
+      "width": 44,
+      "height": 44
+    }
+  },
+  "flex-layout.row#header-mobile-links": {
+    "children": ["link#wishlist", "link#orders"],
+    "props": {
+      "blockClass": ["header-mobile-links"],
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true
+    }
+  },
+  "link#wishlist": {
+    "props": {
+      "href": "/account#/wishlist",
+      "label": "Wishlist",
+      "blockClass": ["wishlist"]
+    }
+  },
+  "link#orders": {
+    "props": {
+      "href": "/account#/orders",
+      "label": "Meus Pedidos",
+      "blockClass": ["orders"]
+    }
+  }
+}

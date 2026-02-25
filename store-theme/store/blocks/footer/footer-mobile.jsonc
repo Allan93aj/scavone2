@@ -1,0 +1,32 @@
+{
+  "footer-layout.mobile": {
+    "children": [
+      "flex-layout.row#footer-mobile",
+      "flex-layout.row#footer-copyright",
+      "back-to-top-button"
+    ]
+  },
+  "flex-layout.row#footer-mobile": {
+    "children": ["flex-layout.col#footer-mobile"],
+    "props": {
+      "blockClass": "footer-mobile"
+    }
+  },
+  "flex-layout.col#footer-mobile": {
+    "title": "Rodapé Mobile",
+    "children": [
+      "scavone-newsletter",
+      "scavone-image-list#social-link",
+      "menu-item#footer-mobile-catalogo",
+      "menu-item#footer-mobile-institucional",
+      "menu-item#footer-mobile-atendimento",
+      "rich-text#payment-title",
+      "scavone-image-list#paymentForm-list",
+      "rich-text#security-title",
+      "scavone-imagem#security-icon"
+    ],
+    "props": {
+      "blockClass": "footer-mobile"
+    }
+  }
+}

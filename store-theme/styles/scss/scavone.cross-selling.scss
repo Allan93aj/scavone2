@@ -1,0 +1,227 @@
+@use './config/variables' as *;
+
+.crossProductList {
+  width: 100%;
+  max-width: 1300px;
+  padding: 24px 24px 24px 0;
+  column-gap: 32px;
+  display: flex;
+  flex-direction: column;
+  height: 66.6875rem;
+  overflow-y: scroll;
+
+  @include mobile {
+    padding: 0;
+  }
+
+  &::-webkit-scrollbar {
+    height: 12px;
+    width: 4px;
+    background: #eff1f2;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #baab95;
+  }
+
+  &::-webkit-scrollbar-corner {
+    background: #ffffff;
+  }
+}
+
+.crossProductSummary {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-bottom: 2.625rem;
+  margin-bottom: 2.625rem;
+  border-bottom: 1px solid $c-main-brown;
+
+  @include mobile {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+
+  :global(.vtex-stack-layout-0-x-stackItem--product-image-kit-look--wishlist-pdp) {
+    top: 6px;
+    right: 6px;
+    left: auto;
+
+    :global(.vtex-wish-list-1-x-wishlistIconContainer--wishlist-pdp) {
+      position: static !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  :global(.vtex-flex-layout-0-x-flexRow--product-image-mob) {
+    :global(.vtex-flex-layout-0-x-flexRowContent--product-image-mob) {
+      display: flex;
+
+      :global(.vtex-flex-layout-0-x-flexCol--column-name-mobile) {
+        display: flex;
+
+        :global(.vtex-product-summary-2-x-nameContainer) {
+          margin: 22px 0 25px 0;
+          justify-content: start;
+
+          :global(.vtex-product-summary-2-x-productBrand) {
+            color: #000000;
+            font-family: Montserrat;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+            letter-spacing: 2px;
+          }
+        }
+
+        :global(.vtex-flex-layout-0-x-flexRowContent--priceContainerBuyTogether) {
+          display: flex;
+          align-items: flex-end;
+
+          :global(.vtex-product-price-1-x-installments) {
+            margin-bottom: 0.1875rem;
+          }
+        }
+
+        :global(.vtex-store-components-3-x-skuSelectorSubcontainer--tamanho) {
+          height: 4.75rem;
+          display: flex;
+          justify-content: center;
+        }
+
+        :global(.vtex-store-components-3-x-skuSelectorNameContainer) {
+          :global(.vtex-store-components-3-x-skuSelectorOptionsList) {
+            padding: 0 !important;
+
+            :global(.vtex-store-components-3-x-skuSelectorItem) {
+              border-radius: $border-radius-pattern;
+            }
+          }
+        }
+
+        :global(.vtex-product-quantity-1-x-quantitySelectorContainer) {
+          margin-bottom: 1.4375rem;
+        }
+
+        :global(.vtex-button) {
+          min-height: 3.125rem;
+          max-height: 3.125rem;
+          border-radius: $border-radius-pattern;
+
+          :global(.vtex-add-to-cart-button-0-x-buttonText) {
+            display: none;
+          }
+
+          :global(.vtex-add-to-cart-button-0-x-buttonDataContainer) {
+            &::after {
+              content: 'Adicionar produto';
+              font-size: 0.875rem;
+              font-weight: 700;
+              color: #000000;
+              letter-spacing: 2.05px;
+              text-transform: capitalize;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  :global(.vtex-product-summary-2-x-imageContainer) {
+    width: 289px;
+    margin: 0;
+
+    :global(.vtex-product-summary-2-x-image) {
+      max-width: 289px;
+    }
+
+    @include mobile {
+      max-width: 100%;
+      width: 100%;
+
+      :global(.vtex-product-summary-2-x-image) {
+        max-width: 100%;
+        max-height: max-content;
+        border-radius: 0;
+      }
+    }
+  }
+
+  :global(.vtex-flex-layout-0-x-flexRow--row-product-info-buy-together) {
+    :global(.vtex-flex-layout-0-x-flexCol--column-left-buy-together) {
+      :global(.vtex-product-summary-2-x-SKUSelectorContainer) {
+        :global(.vtex-product-summary-2-x-skuSelectorItem) {
+          border-radius: $border-radius-pattern;
+
+          :global(.vtex-product-summary-2-x-frameAround) {
+            border: 1px solid $c-main-black;
+          }
+
+          :global(.vtex-product-summary-2-x-skuSelectorInternalBox) {
+            border-radius: $border-radius-pattern;
+          }
+        }
+      }
+    }
+  }
+
+  :global(.vtex-flex-layout-0-x-flexCol--column-right-buy-together) {
+    justify-content: center;
+
+    :global(.vtex-flex-layout-0-x-flexRowContent--prices-mobile) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      :global(.vtex-product-quantity-1-x-quantitySelectorContainer) {
+        max-height: 44px;
+      }
+    }
+
+    :global(.vtex-flex-layout-0-x-flexRowContent--priceContainerBuyTogether) {
+      :global(.vtex-product-price-1-x-installments--buyTogether) {
+        color: #000;
+        text-align: right;
+        font-family: Montserrat;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        margin-top: 5px;
+      }
+    }
+
+    :global(.vtex-flex-layout-0-x-flexRow--buy-button-row) {
+      :global(.vtex-flex-layout-0-x-flexRowContent--buy-button-row) {
+        gap: 16px;
+
+        :global(.vtex-button) {
+          width: 322px;
+          border-radius: $border-radius-pattern;
+
+          :global(.vtex-add-to-cart-button-0-x-buttonDataContainer) {
+            &::after {
+              content: 'Adicionar produto';
+              color: #000;
+              font-weight: 700;
+              font-size: 0.875rem;
+              font-weight: 700;
+              letter-spacing: 2.05px;
+              text-transform: capitalize;
+            }
+          }
+
+          :global(.vtex-add-to-cart-button-0-x-buttonText) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

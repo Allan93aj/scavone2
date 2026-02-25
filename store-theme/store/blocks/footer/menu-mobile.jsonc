@@ -1,0 +1,191 @@
+{
+  "menu-item#footer-mobile-catalogo": {
+    "props": {
+      "id": "",
+      "type": "custom",
+      "blockClass": ["link-footer"],
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/#",
+        "noFollow": false,
+        "tagTitle": "CATÁLOGO",
+        "text": "CATÁLOGO"
+      }
+    },
+    "blocks": ["vtex.menu@2.x:submenu.accordion#footer-catalogo"]
+  },
+  "vtex.menu@2.x:submenu.accordion#footer-catalogo": {
+    "children": ["menu#mobile-catalogo"],
+    "props": {
+      "blockClass": ["footer"]
+    }
+  },
+  "menu#mobile-catalogo": {
+    "props": {
+      "orientation": "vertical",
+      "blockClass": ["menu-footer-institucional"],
+      "items": [
+        {
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "",
+            "noFollow": false,
+            "tagTitle": "Clássicos",
+            "text": "Clássicos"
+          }
+        },
+        {
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "",
+            "noFollow": false,
+            "tagTitle": "Urban",
+            "text": "Urban"
+          }
+        },
+        {
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "",
+            "noFollow": false,
+            "tagTitle": "Florais",
+            "text": "Florais"
+          }
+        },
+        {
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "",
+            "noFollow": false,
+            "tagTitle": "Bambini",
+            "text": "Bambini"
+          }
+        },
+        {
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "",
+            "noFollow": false,
+            "tagTitle": "Básicos",
+            "text": "Básicos"
+          }
+        }
+      ]
+    }
+  },
+  "menu-item#footer-mobile-institucional": {
+    "props": {
+      "id": "",
+      "type": "custom",
+      "blockClass": ["link-footer"],
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/#",
+        "noFollow": false,
+        "tagTitle": "INSTITUCIONAL",
+        "text": "INSTITUCIONAL"
+      }
+    },
+    "blocks": ["vtex.menu@2.x:submenu.accordion#footer-institucional"]
+  },
+  "vtex.menu@2.x:submenu.accordion#footer-institucional": {
+    "children": ["menu#mobile-institucional"],
+    "props": {
+      "blockClass": ["footer"]
+    }
+  },
+  "menu#mobile-institucional": {
+    "props": {
+      "orientation": "vertical",
+      "blockClass": ["menu-footer-institucional"],
+      "items": [
+        {
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "",
+            "noFollow": false,
+            "tagTitle": "Sobre a Scavone",
+            "text": "Sobre a Scavone"
+          }
+        },
+        {
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "",
+            "noFollow": false,
+            "tagTitle": "Políticas",
+            "text": "Políticas"
+          }
+        }
+      ]
+    }
+  },
+  "menu-item#footer-mobile-atendimento": {
+    "props": {
+      "id": "",
+      "type": "custom",
+      "blockClass": ["link-footer"],
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/#",
+        "noFollow": false,
+        "tagTitle": "ATENDIMENTO",
+        "text": "ATENDIMENTO"
+      }
+    },
+    "blocks": ["vtex.menu@2.x:submenu.accordion#footer-atendimento"]
+  },
+  "vtex.menu@2.x:submenu.accordion#footer-atendimento": {
+    "children": ["menu#mobile-atendimento"],
+    "props": {
+      "blockClass": ["footer"]
+    }
+  },
+  "menu#mobile-atendimento": {
+    "props": {
+      "orientation": "vertical",
+      "blockClass": ["menu-footer-institucional"],
+      "items": [
+        {
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "",
+            "noFollow": false,
+            "tagTitle": "Fale conosco",
+            "text": "Fale conosco"
+          }
+        },
+        {
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "",
+            "noFollow": false,
+            "tagTitle": "Nossas Lojas",
+            "text": "Nossas Lojas"
+          }
+        }
+      ]
+    }
+  }
+}

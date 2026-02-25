@@ -1,0 +1,63 @@
+.coupon_manager {
+  font-family: 'Montserrat';
+  margin: 1rem;
+}
+
+.add_coupon_form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.coupon_manager label {
+  font-size: 0.85rem;
+}
+
+.add_coupon_form input {
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  width: 65%;
+  border: 2px solid #ceccc3;
+  border-radius: 0.25rem;
+}
+
+.add_coupon_form button {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  width: 30%;
+  border-radius: 0.25rem;
+  background: #ceccc3;
+  color: #000;
+  border: 0;
+}
+
+.active_coupon {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.active_coupon button {
+  font-family: sans-serif;
+  font-weight: 600;
+  padding: 0;
+  cursor: pointer;
+}
+
+.coupon_section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn_add {
+  background: #ceccc3;
+  color: #000;
+  border: 0;
+}
+
+.remove_coupon {
+  background: none;
+  color: red;
+  border: none;
+}

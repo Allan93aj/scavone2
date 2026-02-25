@@ -1,0 +1,66 @@
+{
+  "store.custom#contact-us": {
+    "children": ["flex-layout.row#contact-us-container"]
+  },
+  "flex-layout.row#contact-us-container": {
+    "title": "Container",
+    "children": ["flex-layout.col#contact-us-content"],
+    "props": {
+      "blockClass": "institutional-container"
+    }
+  },
+  "flex-layout.col#contact-us-content": {
+    "children": [
+      "rich-text#institucional-breadcrumb",
+      "flex-layout.row#contact-us-content"
+    ],
+    "props": {
+      "blockClass": "institutional-content"
+    }
+  },
+  "flex-layout.row#contact-us-content": {
+    "title": "Conteúdo",
+    "children": [
+      "flex-layout.col#institutional-menu",
+      "flex-layout.col#fale-conosco-form",
+      "responsive-layout.desktop#contact-us-opening"
+    ],
+    "props": {
+      "fullWidth": true,
+      "colSizing": "auto",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "blockClass": ["institutional-content", "fale-conosco-content"]
+    }
+  },
+  "flex-layout.col#fale-conosco-form": {
+    "children": [
+      "rich-text#fale-conosco-title",
+      "responsive-layout.mobile#contact-us-opening",
+      "scavone-contact-us"
+    ],
+    "props": {
+      "preventVerticalStretch": true
+    }
+  },
+  "rich-text#fale-conosco-title": {
+    "title": "Título",
+    "props": {
+      "text": "### FALE CONOSCO",
+      "blockClass": "fale-conosco-title"
+    }
+  },
+  "responsive-layout.desktop#contact-us-opening": {
+    "children": ["rich-text#contact-us-opening"]
+  },
+  "responsive-layout.mobile#contact-us-opening": {
+    "children": ["rich-text#contact-us-opening"]
+  },
+  "rich-text#contact-us-opening": {
+    "title": "Horário de Atendimento",
+    "props": {
+      "blockClass": "contact-us-text",
+      "text": "**Horário de atendimento** \n\n De segunda à sexta-feira das 7h30 às 17h30 \n\n **Fone:** (11) 4524-92280 - Ramal 9260 \n\n **Whatsapp:** (11) 99114-2203 \n\n **Entre em contato pelo e-mail:** sac@scavonecasa.com.br ou preencha os campos abaixo:\n\n[Chat Whatsapp](http://wa.me/5511991142203?text=Olá!&utmi_p=_institucional_sobre-nos&utmi_pc=Html&utmi_cp=whatsAppFloat)"
+    }
+  }
+}
